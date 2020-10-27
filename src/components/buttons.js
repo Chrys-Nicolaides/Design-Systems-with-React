@@ -1,10 +1,9 @@
 import styled from "styled-components";
-
-const primaryTeal = "#319795";
+import { defaultTheme, typeScale } from "../systems";
 
 const Button = styled.button`
   padding: 12px 24px;
-  font-size: 1rem;
+  font-size: ${typeScale.paragraph};
   border-radius: 5px;
   min-width: 100px;
   cursor: pointer;
@@ -12,7 +11,7 @@ const Button = styled.button`
 `;
 
 export const PrimaryButton = styled(Button)`
-  background-color: ${primaryTeal};
+  background-color: ${defaultTheme.primaryColor};
   border: none;
   color: white;
   font-weight: 500;
@@ -20,15 +19,15 @@ export const PrimaryButton = styled(Button)`
 
 export const SecondaryButton = styled(Button)`
   background: none;
-  border: 2px solid ${primaryTeal};
-  color: ${primaryTeal};
+  border: 2px solid ${defaultTheme.primaryColor};
+  color: ${defaultTheme.primaryColor};
   font-weight: 600;
 `;
 
 export const TertiaryButton = styled(Button)`
   background: none;
   border: none;
-  color: ${primaryTeal};
+  color: ${defaultTheme.primaryColor};
   font-weight: 600;
 `;
 
