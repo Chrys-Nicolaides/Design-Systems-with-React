@@ -1,18 +1,28 @@
-import { purple, pink, grey, red, yellow, green } from "./colors";
+import {
+  blue,
+  indigo,
+  purple,
+  pink,
+  grey,
+  red,
+  yellow,
+  green,
+  teal,
+} from "./colors";
 import { primaryFont } from "./typography";
 
 export const defaultTheme = {
-  primaryColor: purple[900],
-  primaryColorHover: purple[600],
-  primaryColorFocus: purple[600],
-  primaryColorActive: pink[500],
-  textColorOnPrimary: purple[200],
-  textColor: purple[200],
-  textColorInverted: purple[800],
+  primaryColor: teal[700],
+  primaryColorHover: teal[400],
+  primaryColorFocus: teal[600],
+  primaryColorActive: blue[500],
+  textColorOnPrimary: teal[200],
+  textColor: teal[700],
+  textColorInverted: teal[800],
   disabled: grey[600],
   textOnDisabled: grey[300],
   formElementBackground: grey[100],
-  textOnformElementBackground: purple[900],
+  textOnformElementBackground: teal[900],
   primaryFont,
 
   status: {
