@@ -12,17 +12,17 @@ import {
 import { primaryFont } from "./typography";
 
 export const defaultTheme = {
-  primaryColor: teal[700],
-  primaryColorHover: teal[400],
-  primaryColorFocus: teal[600],
-  primaryColorActive: blue[500],
-  textColorOnPrimary: teal[200],
-  textColor: teal[700],
-  textColorInverted: teal[800],
+  primaryColor: indigo[600],
+  primaryColorHover: indigo[700],
+  primaryColorFocus: indigo[700],
+  primaryColorActive: indigo[900],
+  textColorOnPrimary: indigo[100],
+  textColor: indigo[100],
+  textColorInverted: indigo[100],
   disabled: grey[600],
   textOnDisabled: grey[300],
   formElementBackground: grey[100],
-  textOnformElementBackground: teal[900],
+  textOnFormElementBackground: indigo[100],
   primaryFont,
 
   status: {
@@ -39,17 +39,17 @@ export const defaultTheme = {
 };
 
 export const darkTheme = {
-  primaryColor: purple[200],
-  primaryColorHover: purple[400],
-  primaryColorFocus: purple[300],
-  primaryColorActive: pink[500],
-  textColorOnPrimary: purple[900],
-  textColor: purple[900],
-  textColorInverted: purple[200],
+  primaryColor: grey[100],
+  primaryColorHover: indigo[400],
+  primaryColorFocus: indigo[500],
+  primaryColorActive: indigo[500],
+  textColorOnPrimary: indigo[900],
+  textColor: indigo[700],
+  textColorInverted: indigo[200],
   disabled: grey[600],
   textOnDisabled: grey[300],
-  formElementBackground: purple[200],
-  textOnformElementBackground: grey[100],
+  formElementBackground: indigo[200],
+  textOnFormElementBackground: grey[100],
   primaryFont,
 
   status: {
