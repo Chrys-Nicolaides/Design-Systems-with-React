@@ -5,17 +5,17 @@ import PrimaryButton, {
   SecondaryButton,
   TertiaryButton,
 } from "./components/buttons";
-import { GlobalStyle, darkTheme, defaultTheme } from "./systems";
+import { GlobalStyle, darkTheme, lightTheme } from "./systems";
 
 const App = () => {
-  const [useDarkTheme, setDarkTheme] = useState(true);
+  const [useDarkTheme, setDarkTheme] = useState(false);
   return (
     <div>
       <div>
         <h1>Design Systems</h1>
         <h2>Buttons</h2>
       </div>
-      <ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
+      <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
         <button
           style={{ margin: "0 16px 24px", padding: "8px", background: "none" }}
           onClick={() => setDarkTheme(true)}
@@ -27,12 +27,12 @@ const App = () => {
           style={{ margin: "0 16px 24px", padding: "8px", background: "none" }}
           onClick={() => setDarkTheme(false)}
         >
-          Default theme
+          Light theme
       </button>
         <div
           style={{
             background: useDarkTheme
-              ? defaultTheme.primaryColor
+              ? lightTheme.primaryColor
               : darkTheme.primaryColor,
             width: "100vw",
             height: "100vh",
@@ -51,7 +51,7 @@ const App = () => {
           <PrimaryButton style={{
             margin: "0 16px 24px"
           }}>Primary Button</PrimaryButton>
-          < SecondaryButton > Secondary Button</SecondaryButton>
+          <SecondaryButton> Secondary Button</SecondaryButton>
           <TertiaryButton>Tertiary Button</TertiaryButton>
         </div>
         <GlobalStyle />

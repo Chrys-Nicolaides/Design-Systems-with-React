@@ -107,7 +107,7 @@ const Button = styled.button`
   }
 
   &:focus {
-    background-color: ${(props) => props.theme.primaryColorfocus};
+    background-color: ${(props) => props.theme.primaryColorFocus};
     color: ${(props) => props.theme.textColorOnPrimary};
     outline: none;
   }

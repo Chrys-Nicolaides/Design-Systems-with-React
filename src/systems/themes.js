@@ -11,8 +11,8 @@ import {
 } from "./colors";
 import { primaryFont } from "./typography";
 
-export const defaultTheme = {
-  primaryColor: indigo[600],
+export const lightTheme = {
+  primaryColor: indigo[900],
   primaryColorHover: indigo[700],
   primaryColorFocus: indigo[700],
   primaryColorActive: indigo[900],
