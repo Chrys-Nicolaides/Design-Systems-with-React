@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/cli": "^6.0.27",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -11,14 +12,33 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.2.0",
     "styled-components-modifiers": "^1.2.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-a11y": "^5.3.13",
+    "@storybook/addon-actions": "^6.0.27",
+    "@storybook/addon-backgrounds": "^5.3.14",
+    "@storybook/addon-contexts": "^5.3.14",
+    "@storybook/addon-docs": "^5.3.14",
+    "@storybook/addon-essentials": "^6.0.27",
+    "@storybook/addon-knobs": "^5.3.14",
+    "@storybook/addon-links": "^6.0.27",
+    "@storybook/addons": "^5.3.13",
+    "@storybook/node-logger": "^6.0.27",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.27",
+    "babel-loader": "^8.1.0",
+    "react-is": "^17.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
