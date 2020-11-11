@@ -1,4 +1,5 @@
-export const primaryFont = '"Roboto Condensed", "Roboto Mono", monospace';
+export const primaryFont = "Fira Sans Condensed";
+export const secondaryFont = "Source Sans Pro";
 
 export const typeScale = {
   h1: "1.8rem",
