@@ -10,6 +10,7 @@ import {
   teal,
 } from "./colors";
 import { primaryFont } from "./typography";
+import { secondaryFont } from "./typography";
 
 export const lightTheme = {
   primaryColor: indigo[900],
@@ -19,11 +20,12 @@ export const lightTheme = {
   textColorOnPrimary: indigo[100],
   textColor: indigo[100],
   textColorInverted: indigo[100],
-  disabled: grey[600],
+  disabledColor: grey[600],
   textOnDisabled: grey[300],
   formElementBackground: grey[100],
   textOnFormElementBackground: indigo[100],
   primaryFont,
+  secondaryFont,
 
   status: {
     warningColor: yellow[500],
@@ -46,11 +48,13 @@ export const darkTheme = {
   textColorOnPrimary: indigo[900],
   textColor: indigo[700],
   textColorInverted: indigo[200],
-  disabled: grey[600],
-  textOnDisabled: grey[300],
+  disabledColor: grey[300],
+  textOnDisabled: grey[700],
   formElementBackground: indigo[200],
   textOnFormElementBackground: grey[100],
   primaryFont,
+  secondaryFont,
+
 
   status: {
     warningColor: yellow[500],
