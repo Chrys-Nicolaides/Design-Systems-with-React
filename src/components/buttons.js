@@ -109,7 +109,6 @@ const BUTTON_MODIFIERS = {
 
 const Button = styled.button`
   padding: 12px 24px;
-  margin: 8px;
   font-size: ${typeScale.paragraph};
   border-radius: 5px;
   min-width: 100px;

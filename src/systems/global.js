@@ -12,15 +12,17 @@ html {
   box-sizing: inherit;
 }
 body {
-  margin: 0;
-  padding: 30px 30px 30px;
   font-family: ${primaryFont}
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-main {
-  width: 90%;
-  margin: 0 auto;
+html, body, #root, #root > div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
 }
+
 `;
 
