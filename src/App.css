@@ -2,16 +2,13 @@
 
 
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
 }
-
-.base {
-  display: inline;
-}
-
 
 .themeToggle {
-  text-align: right;
+  text-align: left;
   display: flex;
   justify-content: flex-end;
 }
