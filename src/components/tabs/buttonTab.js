@@ -38,170 +38,163 @@ const ButtonsTab = () => {
           tempus ultricies maximus et, maximus at tellus. Phasellus varius risus
           eget scelerisque maximus.
         </p>
-        <h3 style={{ paddingTop: "60px" }}>Button States</h3>
       </div>
       <div
         className="all-buttons"
         style={{
           margin: "0 16px 0 46px",
-          paddingTop: "40px",
-          display: "flex",
-          flexDirection: "columns",
-          alignItems: "flex-start",
+          paddingTop: "80px",
+          display: "grid",
+          gridTemplatecolumns: "column",
         }}
       >
-        <div
-          className="state-names"
-          style={{
-            margin: "0 16px 24px 0",
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div style={{ margin: "0 16px 24px 0", alignItems: "flex-start" }}>
-            Default
-          </div>
-          <div style={{ margin: "0 16px 24px 0", alignItems: "center" }}>
-            Hover
-          </div>
-          <div style={{ margin: "0 16px 24px 0", alignItems: "flex-end" }}>
-            Active
-          </div>
-          <div style={{ margin: "0 16px 24px 0", alignItems: "flex-end" }}>
-            Disabled
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-start",
-          }}
-          className="clickable-buttons"
-        >
+        <div className="clickable-buttons">
           <PrimaryButton
             style={{
-              margin: "0 16px 60px 0",
+              marginRight: "40px",
             }}
-            className="no-click"
           >
             Primary Button
           </PrimaryButton>
           <SecondaryButton
             style={{
-              margin: "0 16px 60px",
+              marginRight: "40px",
             }}
           >
             Secondary Button
           </SecondaryButton>
-          <TertiaryButton
-            style={{
-              margin: "0 16px 60px",
-            }}
-          >
-            Tertiary Button
-          </TertiaryButton>
+          <TertiaryButton>Tertiary Button</TertiaryButton>
+        </div>
+        <h3 style={{ paddingTop: "80px" }}>Button States</h3>
+        <div className="static-buttons">
           <div
             style={{
               display: "flex",
-              flexDirection: "column ",
-              alignItems: "flex-start",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              padding: "0 300px 0 300px",
+              paddingBottom: "40px",
+              paddingTop: "40px",
             }}
-            className="primary-status-buttons"
           >
-            <PrimaryButton
-              style={{
-                margin: "0 16px 24px 0",
-              }}
-              modifiers={["success"]}
-            >
+            <div>Default</div>
+            <div>Hover</div>
+            <div>Active</div>
+            <div>Disabled</div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              padding: "0 300px 0 300px",
+              marginBottom: "40px",
+            }}
+          >
+            <PrimaryButton className="no-click">Primary Button</PrimaryButton>
+            <PrimaryButton className="no-click" modifiers={["PrimaryHover"]}>
               Primary Button
             </PrimaryButton>
-            <PrimaryButton
-              style={{
-                margin: "0 16px 24px 0",
-              }}
-              modifiers={["warning"]}
-            >
+            <PrimaryButton className="no-click" modifiers={["PrimaryActive"]}>
               Primary Button
             </PrimaryButton>
-            <PrimaryButton
-              style={{
-                margin: "0 16px 24px 0",
-              }}
-              modifiers={["error"]}
-            >
-              Primary Button
-            </PrimaryButton>
-            <PrimaryButton
-              style={{
-                margin: "0 16px 24px 0",
-              }}
-              modifiers={["disabled"]}
-            >
+            <PrimaryButton className="no-click" modifiers={["disabled"]}>
               Primary Button
             </PrimaryButton>
           </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              padding: "0 300px 0 300px",
+              marginBottom: "40px",
+            }}
+          >
+            <SecondaryButton className="no-click">
+              Secondary Button
+            </SecondaryButton>
+            <SecondaryButton
+              className="no-click"
+              modifiers={["SecondaryHover"]}
+            >
+              Secondary Button
+            </SecondaryButton>
+            <SecondaryButton
+              className="no-click"
+              modifiers={["SecondaryActive"]}
+            >
+              Secondary Button
+            </SecondaryButton>
+            <SecondaryButton
+              className="no-click"
+              modifiers={["SecondaryDisabled"]}
+            >
+              Secondary Button
+            </SecondaryButton>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              padding: "0 300px 0 300px",
+              marginBottom: "80px",
+            }}
+          >
+            <TertiaryButton className="no-click">Tertiary Buton</TertiaryButton>
+            <TertiaryButton className="no-click" modifiers={["TertiaryHover"]}>
+              Tertiary Button
+            </TertiaryButton>
+            <TertiaryButton className="no-click" modifiers={["TertiaryActive"]}>
+              Tertiary Button
+            </TertiaryButton>
+            <TertiaryButton
+              className="no-click"
+              modifiers={["TertiaryDisabled"]}
+            >
+              Tertiary Button
+            </TertiaryButton>
+          </div>
+          <div></div>
+        </div>
+
+        <div
+          className="success-buttons"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            padding: "0 300px 0 300px",
+            marginBottom: "160px",
+          }}
+        >
+          <PrimaryButton modifiers={["success"]}>Primary Button</PrimaryButton>
+          <PrimaryButton modifiers={["warning"]}>Primary Button</PrimaryButton>
+          <PrimaryButton modifiers={["error"]}>Primary Button</PrimaryButton>
+          <PrimaryButton modifiers={["disabled"]}>Primary Button</PrimaryButton>
         </div>
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            padding: "0 300px 0 300px",
+            marginBottom: "160px",
           }}
         >
-          <SecondaryButton
-            style={{
-              margin: "0 16px 24px",
-            }}
-            modifiers={["SecondaryButtonSuccess"]}
-          >
-            {" "}
+          <SecondaryButton modifiers={["SecondaryButtonSuccess"]}>
             Secondary Button
           </SecondaryButton>
-          <SecondaryButton
-            style={{
-              margin: "0 16px 24px",
-            }}
-            modifiers={["SecondaryButtonWarning"]}
-          >
-            {" "}
+          <SecondaryButton modifiers={["SecondaryButtonWarning"]}>
             Secondary Button
           </SecondaryButton>
-          <SecondaryButton
-            style={{
-              margin: "0 16px 24px",
-            }}
-            modifiers={["SecondaryButtonError"]}
-          >
-            {" "}
+          <SecondaryButton modifiers={["SecondaryButtonError"]}>
             Secondary Button
           </SecondaryButton>
-          <SecondaryButton
-            style={{
-              margin: "0 16px 24px",
-            }}
-            modifiers={["disabled"]}
-          >
-            {" "}
+          <SecondaryButton modifiers={["SecondaryDisabled"]}>
             Secondary Button
           </SecondaryButton>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-end",
-          }}
-        >
-          <TertiaryButton
-            style={{
-              margin: "0 16px 24px",
-            }}
-            modifiers={["disabled"]}
-          >
-            Tertiary Button
-          </TertiaryButton>
         </div>
       </div>
     </div>
