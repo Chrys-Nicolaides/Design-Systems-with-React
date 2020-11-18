@@ -15,7 +15,7 @@ const BUTTON_MODIFIERS = {
 
   warning: ({ theme, theme: { status } }) => `
     background-color: ${status.warningColor};
-    color: ${theme.defaultText};
+    color: ${status.warningDarkText};
 
     &:hover, &:focus {
         background-color: ${status.warningColorHover};
@@ -45,9 +45,9 @@ const BUTTON_MODIFIERS = {
     }
     `,
 
-  success: ({ theme: { status } }) => `
+  success: ({ theme, theme: { status } }) => `
     background-color: ${status.successColor};
-    color: ${status.successLightText};
+    color: ${theme.lightColor};
 
     &:hover, &:focus {
         background-color: ${status.successColorHover};
@@ -77,20 +77,38 @@ const BUTTON_MODIFIERS = {
   }
   `,
 
-  SecondaryButtonWarning: ({ theme, theme: { status } }) => `
+  SecondaryButtonSuccess: ({ theme: { status } }) => `
+        background: none;
+        border: 2px solid ${status.successColor};
+        color: ${status.successColor};
+
+        &:hover, &:focus {
+          background-color: ${status.successColorHover};
+          border: 2px solid ${status.successColor};
+          color: ${status.successLightText};
+      }
+  
+      &:active {
+          background-color: ${status.successColorActive};
+          border: 2px solid ${status.successColorHover};
+          color: ${status.successColorHover};
+      }
+    `,
+
+  SecondaryButtonWarning: ({ theme: { status } }) => `
         background: none;
         border: 2px solid ${status.warningColor};
         color: ${status.warningColor};
 
         &:hover, &:focus {
           background-color: ${status.warningColorHover};
-          color: ${theme.defaultText};
+          color: ${status.warningDarkText};
       }
   
       &:active {
           background-color: ${status.warningColorActive};
-          color: ${theme.defaultText};
-          border: 2px solid ${status.warningColorActiveBorder}
+          color: ${status.warningDarkText};
+          border: 2px solid ${status.warningColorActiveBorder};
       }
     `,
 
@@ -106,25 +124,8 @@ const BUTTON_MODIFIERS = {
   
       &:active {
           background-color: ${status.errorColorActive};
-          border: 2px solid ${status.errorColorHover}
+          border: 2px solid ${status.errorColorHover};
           color: ${status.errorColorHover};
-      }
-    `,
-
-  SecondaryButtonSuccess: ({ theme: { status } }) => `
-        background: none;
-        border: 2px solid ${status.successColor};
-        color: ${status.successColor};
-
-        &:hover, &:focus {
-          background-color: ${status.successColorHover};
-          color: ${status.successLightText};
-      }
-  
-      &:active {
-          background-color: ${status.successColorActive};
-          border: 2px solid ${status.successColorHover}
-          color: ${status.successColorHover};
       }
     `,
 
@@ -166,16 +167,96 @@ const BUTTON_MODIFIERS = {
       background: none;
       color: ${theme.disabledBackgroundColor};
       border: 2px solid ${theme.disabledBackgroundColor};
+
+      &:hover, &:focus, &:active {
+        background: none;
+        color: ${theme.disabledBackgroundColor};
+        border: 2px solid ${theme.disabledBackgroundColor};
+        cursor: not-allowed;
+  
+    }
   `,
   TertiaryDisabled: ({ theme }) => `
       background: none;
       color: ${theme.disabledBackgroundColor};
       border: none;
   `,
+
+  // static state buttons
+
+  PrimarySuccessHover: ({ theme, theme: { status } }) => `
+      background-color: ${status.successColorHover};
+      color: ${theme.lightColor};
+  `,
+  PrimarySuccessActive: ({ theme: { status } }) => `
+      background-color: ${status.successColorActive};
+      border: 2px solid ${status.successColorHover};
+      color: ${status.successColorHover};
+  `,
+
+  PrimaryWarningHover: ({ theme, theme: { status } }) => `
+      background-color: ${status.warningColorHover};
+      color: ${status.warningDarkText};
+    `,
+  PrimaryWarningActive: ({ theme, theme: { status } }) => `
+      background-color: ${status.warningColorActive};
+      color: ${status.warningDarkText};
+      border: 2px solid ${status.warningColorActiveBorder};
+    `,
+
+  PrimaryErrorHover: ({ theme: { status } }) => `
+      background-color: ${status.errorColorHover};
+      color: ${status.errorLightText};
+    
+    `,
+  PrimaryErrorActive: ({ theme: { status } }) => `
+      background-color: ${status.errorColorActive};
+      color: ${status.errorColorHover};
+      border: 2px solid ${status.errorColorHover};
+    `,
+
+  SecondarySuccessHover: ({ theme: { status } }) => `
+      background-color: ${status.successColorHover};
+      border: 2px solid ${status.successColor};
+      color: ${status.successLightText};
+ 
+`,
+  SecondarySuccessActive: ({ theme: { status } }) => `
+      background-color: ${status.successColorActive};
+      border: 2px solid ${status.successColorHover};
+      color: ${status.successColorHover};
+`,
+
+  SecondaryWarningHover: ({ theme: { status } }) => `
+      background: ${status.warningColorHover};
+      color: ${status.warningDarkText};
+      border: 2px solid ${status.warningColor};
+
+    `,
+
+  SecondaryWarningActive: ({ theme: { status } }) => `
+        background-color: ${status.warningColorActive};
+        color: ${status.warningDarkText};
+        border: 2px solid ${status.warningColorActiveBorder};
+      }
+    `,
+
+  SecondaryErrorHover: ({ theme: { status } }) => `
+        background-color: ${status.errorColorHover};
+        color: ${status.errorLightText};
+        border: 2px solid ${status.errorColor};
+
+     
+    `,
+  SecondaryErrorActive: ({ theme: { status } }) => `
+        background-color: ${status.errorColorActive};
+        border: 2px solid ${status.errorColorHover};
+        color: ${status.errorColorHover};
+    `,
 };
 
 const Button = styled.button`
-  padding: 12px 24px;
+  padding: 10px 20px;
   font-size: ${typeScale.paragraph};
   border-radius: 5px;
   min-width: 100px;
