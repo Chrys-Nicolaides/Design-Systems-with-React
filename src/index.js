@@ -3,10 +3,18 @@ import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, darkTheme, lightTheme } from "./systems";
 import ButtonsTab from "./components/tabs/buttonTab";
+import MenuTab from "./components/tabs/menuTab";
 import "./App.css";
-import { TertiaryButton } from "./components/buttons";
+import PrimaryButton, {
+  SecondaryButton,
+  TertiaryButton,
+} from "./components/buttons";
 
 const App = () => {
+  let [isExpanded, setIsExpanded] = useState({
+    primary: false,
+    secondary: false,
+  });
   const [useDarkTheme, setUseDarkTheme] = useState(true);
   return (
     <div
@@ -26,7 +34,30 @@ const App = () => {
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space-between",
+          justifyContent: "flex-end",
+          marginTop: "40px",
+        }}
+      >
+        <button
+          style={{
+            margin: "0 46px 0 46px",
+            padding: "8px",
+            background: "none",
+            borderRadius: "50px",
+            color: useDarkTheme ? lightTheme.textColor : darkTheme.defaultText,
+          }}
+          onClick={() => {
+            setUseDarkTheme(!useDarkTheme);
+          }}
+        >
+          {useDarkTheme ? "dark mode" : "light mode"}
+        </button>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
         }}
       >
         <h1
@@ -41,24 +72,7 @@ const App = () => {
           Design Systems
         </h1>
 
-        <div style={{ display: "flex", alignItems: "flex-end" }}>
-          <button
-            style={{
-              margin: "0 46px 0 46px",
-              padding: "8px",
-              background: "none",
-              borderRadius: "50px",
-              color: useDarkTheme
-                ? lightTheme.textColor
-                : darkTheme.defaultText,
-            }}
-            onClick={() => {
-              setUseDarkTheme(!useDarkTheme);
-            }}
-          >
-            {useDarkTheme ? "dark mode" : "light mode"}
-          </button>
-        </div>
+        <div style={{ display: "flex", alignItems: "flex-end" }}></div>
       </div>
       <div>
         <p
@@ -78,18 +92,8 @@ const App = () => {
           nisi enim, ornare at erat eget, varius consectetur erat. Curabitur
           feugiat ante sem, a tempor sapien volutpat at.
         </p>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            padding: "40px 380px 40px 380px",
-          }}
-        >
-          <TertiaryButton>Buttons</TertiaryButton>
-          <TertiaryButton>Colors</TertiaryButton>
-          <TertiaryButton>Typography</TertiaryButton>
-          <TertiaryButton>Typescale</TertiaryButton>
+        <div>
+          <MenuTab setIsExpanded={setIsExpanded} isExpanded={isExpanded} />
         </div>
       </div>
       <ThemeProvider
@@ -109,7 +113,7 @@ const App = () => {
               : darkTheme.defaultText,
           }}
         >
-          <ButtonsTab />
+          <ButtonsTab isExpanded={isExpanded} />
         </div>
         <GlobalStyle />
       </ThemeProvider>

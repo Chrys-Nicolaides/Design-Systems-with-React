@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import PrimaryButton, { SecondaryButton, TertiaryButton } from "../buttons";
+import PrimaryButton, {
+  SecondaryButton,
+  TertiaryButton,
+  MenuButton,
+} from "../buttons";
 
-const ButtonsTab = () => {
+const ButtonsTab = (props) => {
   let [isExpanded, setIsExpanded] = useState({
     primary: false,
     secondary: false,
   });
+  console.log(isExpanded);
   return (
     <div>
       <div
@@ -70,14 +75,15 @@ const ButtonsTab = () => {
           <TertiaryButton>Tertiary Button</TertiaryButton>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <PrimaryButton
+          <MenuButton
             onClick={() =>
               setIsExpanded({ ...isExpanded, primary: !isExpanded.primary })
             }
+            modifiers={["MenuButton"]}
             style={{ padding: "12px 24px", marginTop: "40px" }}
           >
             show all
-          </PrimaryButton>
+          </MenuButton>
         </div>
         {isExpanded.primary ? (
           <div>
@@ -197,7 +203,9 @@ const ButtonsTab = () => {
               marginBottom: "200px",
             }}
           >
-            <TertiaryButton className="no-click">Tertiary Buton</TertiaryButton>
+            <TertiaryButton className="no-click">
+              Tertiary Button
+            </TertiaryButton>
             <TertiaryButton className="no-click" modifiers={["TertiaryHover"]}>
               Tertiary Button
             </TertiaryButton>
@@ -299,14 +307,14 @@ const ButtonsTab = () => {
           </PrimaryButton>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <PrimaryButton
+          <MenuButton
+            style={{ padding: "12px 24px", marginTop: "40px" }}
             onClick={() =>
               setIsExpanded({ ...isExpanded, secondary: !isExpanded.secondary })
             }
-            style={{ padding: "12px 24px", marginTop: "40px" }}
           >
             show all
-          </PrimaryButton>
+          </MenuButton>
         </div>
         {isExpanded.secondary ? (
           <>

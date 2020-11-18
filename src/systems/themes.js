@@ -56,10 +56,10 @@ export const darkTheme = {
   textColorInverted: purple[200],
   disabledBackgroundColor: grey[700],
   textOnDisabled: grey[500],
-  primaryFont,
-  secondaryFont,
   defaultText: grey[900],
   lightColor: grey[100],
+  primaryFont,
+  secondaryFont,
 
   status: {
     warningColor: yellow[300],
