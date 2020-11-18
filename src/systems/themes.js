@@ -59,6 +59,7 @@ export const darkTheme = {
   primaryFont,
   secondaryFont,
   defaultText: grey[900],
+  lightColor: grey[100],
 
   status: {
     warningColor: yellow[300],

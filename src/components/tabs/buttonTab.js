@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import PrimaryButton, { SecondaryButton, TertiaryButton } from "../buttons";
 
 const ButtonsTab = () => {
+  let [isExpanded, setIsExpanded] = useState({
+    primary: false,
+    secondary: false,
+  });
   return (
     <div>
       <div
         style={{
           marginLeft: "46px",
-          paddingTop: "60px",
+          paddingTop: "40px",
         }}
       >
         <h1>Buttons</h1>
@@ -65,14 +69,63 @@ const ButtonsTab = () => {
           </SecondaryButton>
           <TertiaryButton>Tertiary Button</TertiaryButton>
         </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <PrimaryButton
+            onClick={() =>
+              setIsExpanded({ ...isExpanded, primary: !isExpanded.primary })
+            }
+            style={{ padding: "12px 24px", marginTop: "40px" }}
+          >
+            show all
+          </PrimaryButton>
+        </div>
+        {isExpanded.primary ? (
+          <div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                marginBottom: "40px",
+              }}
+            >
+              <PrimaryButton modifiers={["success"]}>
+                Primary Button
+              </PrimaryButton>
+              <PrimaryButton modifiers={["warning"]}>
+                Primary Button
+              </PrimaryButton>
+              <PrimaryButton modifiers={["error"]}>
+                Primary Button
+              </PrimaryButton>
+              <PrimaryButton modifiers={["disabled"]}>
+                Primary Button
+              </PrimaryButton>
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <SecondaryButton modifiers={["SecondaryButtonSuccess"]}>
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton modifiers={["SecondaryButtonWarning"]}>
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton modifiers={["SecondaryButtonError"]}>
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton modifiers={["SecondaryDisabled"]}>
+                Secondary Button
+              </SecondaryButton>
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
         <h3 style={{ paddingTop: "80px" }}>Button States</h3>
-        <div className="static-buttons">
+        <div style={{ textAlign: "center" }} className="static-buttons">
           <div
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-around",
-              padding: "0 300px 0 300px",
+              justifyContent: "space-between",
               paddingBottom: "40px",
               paddingTop: "40px",
             }}
@@ -86,8 +139,8 @@ const ButtonsTab = () => {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-around",
-              padding: "0 300px 0 300px",
+              justifyContent: "space-between",
+              // padding: "0 300px 0 300px",
               marginBottom: "40px",
             }}
           >
@@ -102,12 +155,13 @@ const ButtonsTab = () => {
               Primary Button
             </PrimaryButton>
           </div>
+
           <div
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-around",
-              padding: "0 300px 0 300px",
+              justifyContent: "space-between",
+              // margin: "0 30px 0 30px",
               marginBottom: "40px",
             }}
           >
@@ -133,13 +187,14 @@ const ButtonsTab = () => {
               Secondary Button
             </SecondaryButton>
           </div>
+
           <div
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-around",
-              padding: "0 300px 0 300px",
-              marginBottom: "80px",
+              justifyContent: "space-between",
+              // padding: "0 300px 0 300px",
+              marginBottom: "200px",
             }}
           >
             <TertiaryButton className="no-click">Tertiary Buton</TertiaryButton>
@@ -164,38 +219,206 @@ const ButtonsTab = () => {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-around",
-            padding: "0 300px 0 300px",
-            marginBottom: "160px",
+            justifyContent: "space-between",
+            // padding: "0 300px 0 300px",
+            marginBottom: "40px",
           }}
         >
-          <PrimaryButton modifiers={["success"]}>Primary Button</PrimaryButton>
-          <PrimaryButton modifiers={["warning"]}>Primary Button</PrimaryButton>
-          <PrimaryButton modifiers={["error"]}>Primary Button</PrimaryButton>
-          <PrimaryButton modifiers={["disabled"]}>Primary Button</PrimaryButton>
+          <PrimaryButton className="no-click" modifiers={["success"]}>
+            Primary Button
+          </PrimaryButton>
+          <PrimaryButton
+            className="no-click"
+            modifiers={["PrimarySuccessHover"]}
+          >
+            Primary Button
+          </PrimaryButton>
+          <PrimaryButton
+            className="no-click"
+            modifiers={["PrimarySuccessActive"]}
+          >
+            Primary Button
+          </PrimaryButton>
+          <PrimaryButton className="no-click" modifiers={["disabled"]}>
+            Primary Button
+          </PrimaryButton>
         </div>
         <div
+          className="warning-buttons"
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-around",
-            padding: "0 300px 0 300px",
-            marginBottom: "160px",
+            justifyContent: "space-between",
+            // padding: "0 300px 0 300px",
+            marginBottom: "40px",
           }}
         >
-          <SecondaryButton modifiers={["SecondaryButtonSuccess"]}>
-            Secondary Button
-          </SecondaryButton>
-          <SecondaryButton modifiers={["SecondaryButtonWarning"]}>
-            Secondary Button
-          </SecondaryButton>
-          <SecondaryButton modifiers={["SecondaryButtonError"]}>
-            Secondary Button
-          </SecondaryButton>
-          <SecondaryButton modifiers={["SecondaryDisabled"]}>
-            Secondary Button
-          </SecondaryButton>
+          <PrimaryButton className="no-click" modifiers={["warning"]}>
+            Primary Button
+          </PrimaryButton>
+          <PrimaryButton
+            className="no-click"
+            modifiers={["PrimaryWarningHover"]}
+          >
+            Primary Button
+          </PrimaryButton>
+          <PrimaryButton
+            className="no-click"
+            modifiers={["PrimaryWarningActive"]}
+          >
+            Primary Button
+          </PrimaryButton>
+          <PrimaryButton className="no-click" modifiers={["disabled"]}>
+            Primary Button
+          </PrimaryButton>
         </div>
+        <div
+          className="error-buttons"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            // padding: "0 300px 0 300px",
+            marginBottom: "40px",
+          }}
+        >
+          <PrimaryButton className="no-click" modifiers={["error"]}>
+            Primary Button
+          </PrimaryButton>
+          <PrimaryButton className="no-click" modifiers={["PrimaryErrorHover"]}>
+            Primary Button
+          </PrimaryButton>
+          <PrimaryButton
+            className="no-click"
+            modifiers={["PrimaryErrorActive"]}
+          >
+            Primary Button
+          </PrimaryButton>
+          <PrimaryButton className="no-click" modifiers={["disabled"]}>
+            Primary Button
+          </PrimaryButton>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <PrimaryButton
+            onClick={() =>
+              setIsExpanded({ ...isExpanded, secondary: !isExpanded.secondary })
+            }
+            style={{ padding: "12px 24px", marginTop: "40px" }}
+          >
+            show all
+          </PrimaryButton>
+        </div>
+        {isExpanded.secondary ? (
+          <>
+            <div
+              className="secondary-success-static-buttons"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                // padding: "0 300px 0 300px",
+                marginBottom: "40px",
+              }}
+            >
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryButtonSuccess"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondarySuccessHover"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondarySuccessActive"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryDisabled"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+            </div>
+            <div
+              className="secondary-warning-static-buttons"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                // padding: "0 300px 0 300px",
+                marginBottom: "40px",
+              }}
+            >
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryButtonWarning"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryWarningHover"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryWarningActive"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryDisabled"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+            </div>
+            <div
+              className="secondary-error-static-buttons"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                // padding: "0 300px 0 300px",
+                marginBottom: "40px",
+              }}
+            >
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryButtonError"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryErrorHover"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryErrorActive"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+              <SecondaryButton
+                className="no-click"
+                modifiers={["SecondaryDisabled"]}
+              >
+                Secondary Button
+              </SecondaryButton>
+            </div>
+          </>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
