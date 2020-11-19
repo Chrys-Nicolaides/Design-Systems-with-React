@@ -5,10 +5,6 @@ import { GlobalStyle, darkTheme, lightTheme } from "./systems";
 import ButtonsTab from "./components/tabs/buttonTab";
 import MenuTab from "./components/tabs/menuTab";
 import "./App.css";
-import PrimaryButton, {
-  SecondaryButton,
-  TertiaryButton,
-} from "./components/buttons";
 
 const App = () => {
   let [isExpanded, setIsExpanded] = useState({
@@ -77,10 +73,10 @@ const App = () => {
       <div>
         <p
           style={{
-            margin: "46px 46px 0 46px",
+            margin: "46px 46px 66px 46px",
             fontFamily: "Source Sans Pro",
             fontWeight: "300",
-            width: "60%",
+            width: "50%",
             textAlign: "left",
             marginLeft: "auto",
             marginRight: "auto",
@@ -92,9 +88,7 @@ const App = () => {
           nisi enim, ornare at erat eget, varius consectetur erat. Curabitur
           feugiat ante sem, a tempor sapien volutpat at.
         </p>
-        <div>
-          <MenuTab setIsExpanded={setIsExpanded} isExpanded={isExpanded} />
-        </div>
+        <div></div>
       </div>
       <ThemeProvider
         theme={useDarkTheme ? darkTheme : lightTheme}
@@ -103,6 +97,7 @@ const App = () => {
           color: useDarkTheme ? lightTheme.textColor : darkTheme.textColor,
         }}
       >
+        <MenuTab setIsExpanded={setIsExpanded} isExpanded={isExpanded} />
         <div
           style={{
             background: useDarkTheme

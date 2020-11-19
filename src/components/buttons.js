@@ -40,7 +40,7 @@ const BUTTON_MODIFIERS = {
 
     &:active {
         background-color: ${status.errorColorActive};
-        color: ${status.errorColorHover};
+        color: ${status.errorDarkText};
         border: 1.8px solid ${status.errorColorHover}
     }
     `,
@@ -57,7 +57,7 @@ const BUTTON_MODIFIERS = {
     &:active {
         background-color: ${status.successColorActive};
         border: 1.8px solid ${status.successColorHover};
-        color: ${status.successColorHover};
+        color: ${status.successDarkText};
     }
     `,
 
@@ -91,7 +91,7 @@ const BUTTON_MODIFIERS = {
       &:active {
           background-color: ${status.successColorActive};
           border: 1.8px solid ${status.successColorHover};
-          color: ${status.successColorHover};
+          color: ${status.successDarkText};
       }
     `,
 
@@ -108,7 +108,7 @@ const BUTTON_MODIFIERS = {
       &:active {
           background-color: ${status.warningColorActive};
           color: ${status.warningDarkText};
-          border: 1.8px solid ${status.warningColorActiveBorder};
+          border: 1.8px solid ${status.warningDarkText};
       }
     `,
 
@@ -125,7 +125,7 @@ const BUTTON_MODIFIERS = {
       &:active {
           background-color: ${status.errorColorActive};
           border: 1.8px solid ${status.errorColorHover};
-          color: ${status.errorColorHover};
+          color: ${status.errorDarkText};
       }
     `,
 
@@ -213,7 +213,7 @@ const BUTTON_MODIFIERS = {
   PrimarySuccessActive: ({ theme: { status } }) => `
       background-color: ${status.successColorActive};
       border: 1.8px solid ${status.successColorHover};
-      color: ${status.successColorHover};
+      color: ${status.successDarkText};
   `,
 
   PrimaryWarningHover: ({ theme, theme: { status } }) => `
@@ -233,7 +233,7 @@ const BUTTON_MODIFIERS = {
     `,
   PrimaryErrorActive: ({ theme: { status } }) => `
       background-color: ${status.errorColorActive};
-      color: ${status.errorColorHover};
+      color: ${status.errorDarkText};
       border: 1.8px solid ${status.errorColorHover};
     `,
 
@@ -246,7 +246,7 @@ const BUTTON_MODIFIERS = {
   SecondarySuccessActive: ({ theme: { status } }) => `
       background-color: ${status.successColorActive};
       border: 1.8px solid ${status.successColorHover};
-      color: ${status.successColorHover};
+      color: ${status.successDarkText};
 `,
 
   SecondaryWarningHover: ({ theme: { status } }) => `
@@ -259,7 +259,7 @@ const BUTTON_MODIFIERS = {
   SecondaryWarningActive: ({ theme: { status } }) => `
         background-color: ${status.warningColorActive};
         color: ${status.warningDarkText};
-        border: 1.8px solid ${status.warningColorActiveBorder};
+        border: 1.8px solid ${status.warningDarkText};
       }
     `,
 
@@ -273,7 +273,7 @@ const BUTTON_MODIFIERS = {
   SecondaryErrorActive: ({ theme: { status } }) => `
         background-color: ${status.errorColorActive};
         border: 1.8px solid ${status.errorColorHover};
-        color: ${status.errorColorHover};
+        color: ${status.errorDarkText};
   
   `,
 };
@@ -360,17 +360,17 @@ export const TertiaryButton = styled(Button)`
 export const MenuButton = styled(Button)`
   background: none;
   border: 1.8px solid rgba(128, 128, 128, 0);
-  color: white;
+  color: ${(props) => props.theme.lightColor};
 
   &:hover,
   &:focus {
-    background-color: none;
+    background: none;
     border: 1.8px solid rgba(128, 128, 128, 0.3);
-    color: white;
+    color: ${(props) => props.theme.lightColor};
   }
 
   &:active {
-    background-color: none;
+    background: none;
     border: 1.8px solid ${(props) => props.theme.secondaryColor};
     color: ${(props) => props.theme.secondaryColor};
   }
