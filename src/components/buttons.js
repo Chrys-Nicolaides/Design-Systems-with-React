@@ -187,17 +187,18 @@ const BUTTON_MODIFIERS = {
   MenuButton: ({ theme }) => `
   background: none;
   border: 1.8px solid rgba(128, 128, 128, 0);
-  color: white;
+  color: ${theme.lightColor};
+  text-decoration: none;
 
   &:hover,
   &:focus {
-    background-color: none;
+    background: none;
     border: 1.8px solid rgba(128, 128, 128, 0.3);
-    color: white;
+    color: ${theme.lightColor};
   }
 
   &:active {
-    background-color: none;
+    background: none;
     border: 1.8px solid ${theme.secondaryColor};
     color: ${theme.secondaryColor};
   }

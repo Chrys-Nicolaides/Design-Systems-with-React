@@ -49,6 +49,12 @@ export const lightTheme = {
     successLightText: green[100],
     successDarkText: green[800],
   },
+
+  purpleTheme: {
+    primaryPurple: purple[500],
+    secondaryPurple: purple[600],
+    tertiaryPurple: purple[700],
+  },
 };
 
 export const darkTheme = {
@@ -87,5 +93,16 @@ export const darkTheme = {
     successColorActive: green[300],
     successLightText: green[100],
     successDarkText: green[800],
+  },
+  purpleTheme: {
+    purple900: purple[900],
+    purple800: purple[800],
+    purple700: purple[700],
+    purple600: purple[600],
+    purple500: purple[500],
+    purple400: purple[400],
+    purple300: purple[300],
+    purple200: purple[200],
+    purple100: purple[100],
   },
 };
