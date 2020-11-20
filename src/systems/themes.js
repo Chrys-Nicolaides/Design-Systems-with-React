@@ -50,10 +50,64 @@ export const lightTheme = {
     successDarkText: green[800],
   },
 
+  neutralTheme: {
+    grey900: grey[900],
+    grey800: grey[800],
+    grey700: grey[700],
+    grey600: grey[600],
+    grey500: grey[500],
+    grey400: grey[400],
+    grey300: grey[300],
+    grey200: grey[200],
+    grey100: grey[100],
+  },
+
   purpleTheme: {
-    primaryPurple: purple[500],
-    secondaryPurple: purple[600],
-    tertiaryPurple: purple[700],
+    purple900: purple[900],
+    purple800: purple[800],
+    purple700: purple[700],
+    purple600: purple[600],
+    purple500: purple[500],
+    purple400: purple[400],
+    purple300: purple[300],
+    purple200: purple[200],
+    purple100: purple[100],
+  },
+
+  successTheme: {
+    green900: green[900],
+    green800: green[800],
+    green700: green[700],
+    green600: green[600],
+    green500: green[500],
+    green400: green[400],
+    green300: green[300],
+    green200: green[200],
+    green100: green[100],
+  },
+
+  errorTheme: {
+    red900: red[900],
+    red800: red[800],
+    red700: red[700],
+    red600: red[600],
+    red500: red[500],
+    red400: red[400],
+    red300: red[300],
+    red200: red[200],
+    red100: red[100],
+  },
+
+  warningTheme: {
+    yellow900: yellow[900],
+    yellow800: yellow[800],
+    yellow700: yellow[700],
+    yellow600: yellow[600],
+    yellow500: yellow[500],
+    yellow400: yellow[400],
+    yellow300: yellow[300],
+    yellow200: yellow[200],
+    yellow100: yellow[100],
   },
 };
 
@@ -94,6 +148,18 @@ export const darkTheme = {
     successLightText: green[100],
     successDarkText: green[800],
   },
+  neutralTheme: {
+    grey900: grey[900],
+    grey800: grey[800],
+    grey700: grey[700],
+    grey600: grey[600],
+    grey500: grey[500],
+    grey400: grey[400],
+    grey300: grey[300],
+    grey200: grey[200],
+    grey100: grey[100],
+  },
+
   purpleTheme: {
     purple900: purple[900],
     purple800: purple[800],
@@ -104,5 +170,41 @@ export const darkTheme = {
     purple300: purple[300],
     purple200: purple[200],
     purple100: purple[100],
+  },
+
+  successTheme: {
+    green900: green[900],
+    green800: green[800],
+    green700: green[700],
+    green600: green[600],
+    green500: green[500],
+    green400: green[400],
+    green300: green[300],
+    green200: green[200],
+    green100: green[100],
+  },
+
+  errorTheme: {
+    red900: red[900],
+    red800: red[800],
+    red700: red[700],
+    red600: red[600],
+    red500: red[500],
+    red400: red[400],
+    red300: red[300],
+    red200: red[200],
+    red100: red[100],
+  },
+
+  warningTheme: {
+    yellow900: yellow[900],
+    yellow800: yellow[800],
+    yellow700: yellow[700],
+    yellow600: yellow[600],
+    yellow500: yellow[500],
+    yellow400: yellow[400],
+    yellow300: yellow[300],
+    yellow200: yellow[200],
+    yellow100: yellow[100],
   },
 };

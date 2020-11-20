@@ -23,9 +23,7 @@ const MenuTab = (props) => {
         }}
       >
         <Link to="/"></Link>
-        <Link modifiers={["MenuButton"]} to="/buttons">
-          Buttons
-        </Link>
+        <Link to="/buttons">Buttons</Link>
         <Link modifiers={["MenuButton"]} to="/color">
           Color
         </Link>

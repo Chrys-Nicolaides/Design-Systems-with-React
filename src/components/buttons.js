@@ -308,6 +308,26 @@ const Button = styled.button`
   }
 `;
 
+// export const linkButton = styled.Link`
+//   background: none;
+//   border: 1.8px solid rgba(128, 128, 128, 0);
+//   color: ${(props) => props.theme.lightColor};
+//   text-decoration: none;
+
+//   &:hover,
+//   &:focus {
+//     background: none;
+//     border: 1.8px solid rgba(128, 128, 128, 0.3);
+//     color: ${(props) => props.theme.lightColor};
+//   }
+
+//   &:active {
+//     background: none;
+//     border: 1.8px solid ${(props) => props.theme.secondaryColor};
+//     color: ${(props) => props.theme.secondaryColor};
+//   }
+// `;
+
 export const PrimaryButton = styled(Button)`
   background-color: ${(props) => props.theme.primaryColor};
   border: 1.8px solid rgb(255, 255, 255, 0);
