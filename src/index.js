@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle, darkTheme, lightTheme } from "./systems";
+import { GlobalStyle, darkTheme, lightTheme, purpleTheme } from "./systems";
 import ButtonsTab from "./components/tabs/buttonTab";
 import MenuTab from "./components/tabs/menuTab";
 import "./App.css";
@@ -14,6 +14,7 @@ const App = () => {
   const [useDarkTheme, setUseDarkTheme] = useState(true);
   return (
     <div
+      className="full-background"
       style={{
         background: useDarkTheme
           ? lightTheme.primaryBackgroundColor
@@ -21,8 +22,6 @@ const App = () => {
         color: useDarkTheme
           ? lightTheme.textColorInverted
           : darkTheme.defaultText,
-        width: "100%",
-        height: "100%",
         fontFamily: "Fira Sans Condensed",
       }}
     >
@@ -108,7 +107,7 @@ const App = () => {
               : darkTheme.defaultText,
           }}
         >
-          <ButtonsTab isExpanded={isExpanded} />
+          {/* <ButtonsTab isExpanded={isExpanded} /> */}
         </div>
         <GlobalStyle />
       </ThemeProvider>

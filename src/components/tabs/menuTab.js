@@ -6,11 +6,12 @@ import PrimaryButton, {
 } from "../buttons";
 import ButtonsTab from "./buttonTab";
 import ColorsTab from "./colorsTab";
+import TypescaleTab from "./typescaleTab";
+import TypographyTab from "./typographyTab";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const MenuTab = (props) => {
   // let { isExpanded, setIsExpanded } = props;
-  // console.log(isExpanded);
   return (
     <Router>
       <div
@@ -21,28 +22,36 @@ const MenuTab = (props) => {
           padding: "40px 380px 40px 380px",
         }}
       >
-        <MenuButton
-          modifiers={["MenuButton"]}
-          // onClick={() =>
-          //   setIsExpanded({ ...isExpanded, primary: !isExpanded.primary })
-          // }
-          to="/buttons"
-        >
+        <Link to="/"></Link>
+        <Link modifiers={["MenuButton"]} to="/buttons">
           Buttons
-        </MenuButton>
-        <MenuButton to="/color">Colors</MenuButton>
-        <MenuButton to="/typography">Typography</MenuButton>
-        <MenuButton to="/typescale">Typescale</MenuButton>
-
-        <Switch>
-          {/* <Route exact path="/buttons">
-            <ButtonsTab />
-          </Route>
-          <Route exact path="/color">
-            <ColorsTab />
-          </Route> */}
-        </Switch>
+        </Link>
+        <Link modifiers={["MenuButton"]} to="/color">
+          Color
+        </Link>
+        <Link modifiers={["MenuButton"]} to="/typography">
+          Typography
+        </Link>
+        <Link modifiers={["MenuButton"]} to="/typescale">
+          Typescale
+        </Link>
       </div>
+
+      <Switch>
+        <Route exact path="/"></Route>
+        <Route exact path="/buttons">
+          <ButtonsTab />
+        </Route>
+        <Route exact path="/color">
+          <ColorsTab />
+        </Route>
+        <Route exact path="/typography">
+          <TypographyTab />
+        </Route>
+        <Route exact path="/typescale">
+          <TypescaleTab />
+        </Route>
+      </Switch>
     </Router>
   );
 };

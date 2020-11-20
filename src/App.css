@@ -9,3 +9,10 @@
 .no-click {
   pointer-events: none;
 }
+
+.full-background {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
