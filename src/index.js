@@ -23,6 +23,8 @@ const App = () => {
           ? lightTheme.textColorInverted
           : darkTheme.defaultText,
         fontFamily: "Fira Sans Condensed",
+        minHeight: "100vh",
+        height: "auto",
       }}
     >
       <div
