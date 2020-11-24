@@ -8,9 +8,22 @@ import PurplePalette, {
 
 const ColorsTab = () => {
   return (
-    <div style={{ paddingLeft: "140px" }}>
-      <h2 style={{ paddingBottom: "60px" }}>Color</h2>
-      <p style={{ paddingBottom: "60px" }}>These are all my colors, oooooh</p>
+    <div
+      style={{
+        margin: "46px 46px 66px 46px",
+      }}
+    >
+      <h1 style={{ paddingBottom: "30px" }}>Color</h1>
+      <p
+        style={{
+          paddingBottom: "60px",
+          fontFamily: "Source Sans Pro",
+          fontWeight: "300",
+          width: "50%",
+        }}
+      >
+        These are all my colors, oooooh
+      </p>
       <h5>Brand</h5>
       <div className="purple-palette">
         <PurplePalette modifiers={["purpleNine"]} className="no-click" />

@@ -68,7 +68,6 @@ const App = () => {
         >
           Design Systems
         </h1>
-
         <div style={{ display: "flex", alignItems: "flex-end" }}></div>
       </div>
       <div>

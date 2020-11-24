@@ -15,11 +15,10 @@ const ButtonsTab = (props) => {
     <div>
       <div
         style={{
-          marginLeft: "46px",
-          paddingTop: "40px",
+          margin: "46px 46px 66px 46px",
         }}
       >
-        <h1>Buttons</h1>
+        <h1 style={{ paddingBottom: "30px" }}>Buttons</h1>
         <p
           style={{
             fontFamily: "Source Sans Pro",
