@@ -10,8 +10,7 @@ import TypescaleTab from "./typescaleTab";
 import TypographyTab from "./typographyTab";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-const MenuTab = (props) => {
-  // let { isExpanded, setIsExpanded } = props;
+const MenuTab = () => {
   return (
     <Router>
       <div
