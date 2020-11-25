@@ -4,16 +4,18 @@ import PrimaryButton, {
   TertiaryButton,
   MenuButton,
 } from "../buttons";
+import { StyledLink } from "../links";
 import ButtonsTab from "./buttonTab";
 import ColorsTab from "./colorsTab";
 import TypescaleTab from "./typescaleTab";
 import TypographyTab from "./typographyTab";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const MenuTab = () => {
+const MenuTab = (props) => {
   return (
     <Router>
       <div
+        className="menu-tabs"
         style={{
           display: "flex",
           flexDirection: "row",
@@ -21,17 +23,19 @@ const MenuTab = () => {
           padding: "40px 380px 40px 380px",
         }}
       >
-        <Link to="/"></Link>
-        <Link to="/buttons">Buttons</Link>
-        <Link modifiers={["MenuButton"]} to="/color">
+        {/* <StyledLink href="DefaultLink" to="/"></StyledLink> */}
+        <StyledLink href="DefaultLink" to="/buttons">
+          Buttons
+        </StyledLink>
+        <StyledLink href="DefaultLink" to="/color">
           Color
-        </Link>
-        <Link modifiers={["MenuButton"]} to="/typography">
+        </StyledLink>
+        <StyledLink href="DefaultLink" to="/typography">
           Typography
-        </Link>
-        <Link modifiers={["MenuButton"]} to="/typescale">
+        </StyledLink>
+        <StyledLink href="DefaultLink" to="/typescale">
           Typescale
-        </Link>
+        </StyledLink>
       </div>
 
       <Switch>

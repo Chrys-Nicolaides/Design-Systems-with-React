@@ -107,9 +107,7 @@ const App = () => {
               ? lightTheme.textColorInverted
               : darkTheme.defaultText,
           }}
-        >
-          {/* <ButtonsTab isExpanded={isExpanded} /> */}
-        </div>
+        ></div>
         <GlobalStyle />
       </ThemeProvider>
     </div>
