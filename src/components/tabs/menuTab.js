@@ -4,12 +4,14 @@ import PrimaryButton, {
   TertiaryButton,
   MenuButton,
 } from "../buttons";
-import { StyledLink } from "../links";
+import StyledLink from "../links";
 import ButtonsTab from "./buttonTab";
 import ColorsTab from "./colorsTab";
 import TypescaleTab from "./typescaleTab";
 import TypographyTab from "./typographyTab";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { buttons } from "polished";
+// import * as Tabs from "./tabs";
 
 const MenuTab = (props) => {
   return (
@@ -23,18 +25,17 @@ const MenuTab = (props) => {
           padding: "40px 380px 40px 380px",
         }}
       >
-        {/* <StyledLink href="DefaultLink" to="/"></StyledLink> */}
-        <StyledLink href="DefaultLink" to="/buttons">
-          Buttons
+        <StyledLink>
+          <Link to="/buttons">{props.ButtonsTab}Buttons</Link>
         </StyledLink>
-        <StyledLink href="DefaultLink" to="/color">
-          Color
+        <StyledLink>
+          <Link to="/color">{props.ColorsTab}Color</Link>
         </StyledLink>
-        <StyledLink href="DefaultLink" to="/typography">
-          Typography
+        <StyledLink>
+          <Link to="/typography">{props.TypographyTab}Typography</Link>
         </StyledLink>
-        <StyledLink href="DefaultLink" to="/typescale">
-          Typescale
+        <StyledLink>
+          <Link to="/typescale">{props.TypescaleTab}Typescale</Link>
         </StyledLink>
       </div>
 
