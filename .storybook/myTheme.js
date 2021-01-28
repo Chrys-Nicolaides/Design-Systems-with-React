@@ -3,7 +3,7 @@ import { create } from "@storybook/theming/create";
 export default create({
   base: "light",
 
-  colorPrimary: "hotpink",
+  colorPrimary: "#585077",
   colorSecondary: "deepskyblue",
 
   // UI
@@ -33,5 +33,5 @@ export default create({
 
   brandTitle: "My custom storybook",
   brandUrl: "https://example.com",
-  brandImage: "https://placehold.it/350x150"
+  brandImage: "https://placehold.it/350x150",
 });

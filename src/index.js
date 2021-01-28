@@ -37,7 +37,9 @@ const App = () => {
       >
         <button
           style={{
-            margin: "0 46px 0 46px",
+            // margin: "0 46px 0 46px",
+            display: "flex",
+            justifyContent: "center",
             padding: "8px",
             background: "none",
             borderRadius: "50px",
