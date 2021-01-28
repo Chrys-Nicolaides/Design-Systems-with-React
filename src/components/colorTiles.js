@@ -162,9 +162,11 @@ const TILE_MODIFIERS = {
 };
 
 const Tile = styled.button`
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border: none;
+  border-radius: 80px;
+  margin: 10px;
 `;
 
 const PurplePalette = styled(Tile)`
@@ -175,21 +177,41 @@ const PurplePalette = styled(Tile)`
 
 export const NeutralPalette = styled(Tile)`
   background-color: ${(props) => props.theme.defaultText};
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 60px;
+  margin: 5px;
 
   ${applyStyleModifiers(TILE_MODIFIERS)}
 `;
 export const SuccessPalette = styled(Tile)`
   background-color: ${(props) => props.theme.defaultText};
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 60px;
+  margin: 5px;
 
   ${applyStyleModifiers(TILE_MODIFIERS)}
 `;
 export const ErrorPalette = styled(Tile)`
   background-color: ${(props) => props.theme.defaultText};
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 60px;
+  margin: 5px;
 
   ${applyStyleModifiers(TILE_MODIFIERS)}
 `;
 export const WarningPalette = styled(Tile)`
   background-color: ${(props) => props.theme.defaultText};
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 60px;
+  margin: 5px;
 
   ${applyStyleModifiers(TILE_MODIFIERS)}
 `;

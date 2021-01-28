@@ -8,8 +8,8 @@ import { contexts } from "./contexts";
 addParameters({
   backgrounds: [
     { name: "Light theme", value: "#f7fafc", default: true },
-    { name: "Dark theme", value: "#1a202c" }
-  ]
+    { name: "Dark theme", value: "#1a202c" },
+  ],
 });
 
 addDecorator(withKnobs);

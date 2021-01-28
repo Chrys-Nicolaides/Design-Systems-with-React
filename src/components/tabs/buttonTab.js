@@ -15,7 +15,8 @@ const ButtonsTab = (props) => {
     <div>
       <div
         style={{
-          margin: "46px 46px 66px 46px",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         <h1 style={{ paddingBottom: "30px" }}>Buttons</h1>
