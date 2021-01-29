@@ -25,8 +25,10 @@ const ColorsTab = (props) => {
         className="first-background"
         style={{
           backgroundImage: "linear-gradient(to bottom right, #37374E, #222534)",
-          width: "100%",
-          margin: "200px",
+          // width: "100vw",
+          // margin: "200px",
+          marginLeft: "200px",
+          marginRight: "200px",
           borderRadius: "40px",
           zIndex: "1",
         }}
@@ -45,7 +47,7 @@ const ColorsTab = (props) => {
             paddingBottom: "60px",
             fontFamily: "Source Sans Pro",
             fontWeight: "300",
-            width: "50%",
+            // width: "50%",
             display: "flex",
             justifyContent: "center",
           }}
@@ -66,6 +68,8 @@ const ColorsTab = (props) => {
           style={{
             display: "flex",
             justifyContent: "center",
+            marginLeft: "315px",
+            marginRight: "315px",
           }}
         >
           <PurplePalette modifiers={["purpleOne"]} className="no-click" />
@@ -80,16 +84,239 @@ const ColorsTab = (props) => {
         </div>
         <div
           classame="color-details"
-          // style={{ display: "flex", justifyContent: "center" }}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            marginLeft: "315px",
+            marginRight: "315px",
+            justifyContent: "space-between",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+          }}
         >
-          <h5>01</h5>
-          <h3>purple-100</h3>
-          <h3>#44ng99</h3>
+          <div>
+            <h5
+              style={{
+                marginTop: "18px",
+                marginBottom: "10px",
+              }}
+            >
+              01
+            </h5>
+            <h6
+              style={{
+                margin: 0,
+              }}
+            >
+              purple-100
+            </h6>
+            <h6
+              style={{
+                marginTop: 6,
+              }}
+            >
+              #FAF5FF
+            </h6>
+          </div>
+          <div>
+            <h5
+              style={{
+                marginTop: "18px",
+                marginBottom: "10px",
+              }}
+            >
+              02
+            </h5>
+            <h6
+              style={{
+                margin: 0,
+              }}
+            >
+              purple-200
+            </h6>
+            <h6
+              style={{
+                marginTop: 6,
+              }}
+            >
+              #E9D8FD
+            </h6>
+          </div>
+          <div>
+            <h5
+              style={{
+                marginTop: "18px",
+                marginBottom: "10px",
+              }}
+            >
+              03
+            </h5>
+            <h6
+              style={{
+                margin: 0,
+              }}
+            >
+              purple-300
+            </h6>
+            <h6
+              style={{
+                marginTop: 6,
+              }}
+            >
+              #D6BCFA
+            </h6>
+          </div>
+          <div>
+            <h5
+              style={{
+                marginTop: "18px",
+                marginBottom: "10px",
+              }}
+            >
+              04
+            </h5>
+            <h6
+              style={{
+                margin: 0,
+              }}
+            >
+              purple-400
+            </h6>
+            <h6
+              style={{
+                marginTop: 6,
+              }}
+            >
+              #B794F4
+            </h6>
+          </div>
+          <div>
+            <h5
+              style={{
+                marginTop: "18px",
+                marginBottom: "10px",
+              }}
+            >
+              05
+            </h5>
+            <h6
+              style={{
+                margin: 0,
+              }}
+            >
+              purple-500
+            </h6>
+            <h6
+              style={{
+                marginTop: 6,
+              }}
+            >
+              #9F7AEA
+            </h6>
+          </div>
+          <div>
+            <h5
+              style={{
+                marginTop: "18px",
+                marginBottom: "10px",
+              }}
+            >
+              06
+            </h5>
+            <h6
+              style={{
+                margin: 0,
+              }}
+            >
+              purple-600
+            </h6>
+            <h6
+              style={{
+                marginTop: 6,
+              }}
+            >
+              #805AD5
+            </h6>
+          </div>
+          <div>
+            <h5
+              style={{
+                marginTop: "18px",
+                marginBottom: "10px",
+              }}
+            >
+              07
+            </h5>
+            <h6
+              style={{
+                margin: 0,
+              }}
+            >
+              purple-700
+            </h6>
+            <h6
+              style={{
+                marginTop: 6,
+              }}
+            >
+              #6B46C1
+            </h6>
+          </div>
+          <div>
+            <h5
+              style={{
+                marginTop: "18px",
+                marginBottom: "10px",
+              }}
+            >
+              08
+            </h5>
+            <h6
+              style={{
+                margin: 0,
+              }}
+            >
+              purple-800
+            </h6>
+            <h6
+              style={{
+                marginTop: 6,
+              }}
+            >
+              #553C9A
+            </h6>
+          </div>
+          <div>
+            <h5
+              style={{
+                marginTop: "18px",
+                marginBottom: "10px",
+              }}
+            >
+              09
+            </h5>
+            <h6
+              style={{
+                margin: 0,
+              }}
+            >
+              purple-900
+            </h6>
+            <h6
+              style={{
+                marginTop: 6,
+              }}
+            >
+              #44337A
+            </h6>
+          </div>
         </div>
         <h5
           style={{
             display: "flex",
             justifyContent: "center",
+            marginTop: "95px",
+            marginBottom: "35px",
           }}
         >
           Other Colors
@@ -101,20 +328,28 @@ const ColorsTab = (props) => {
             marginLeft: "210px",
             marginRight: "210px",
             borderRadius: "40px",
+            marginTop: "40px",
             marginBottom: "100px",
+            paddingTop: "60px",
           }}
         >
           <h5
             style={{
               display: "flex",
               justifyContent: "center",
+              marginTop: "0",
+              marginBottom: "45px",
             }}
           >
             Neutral
           </h5>
           <div
             className="neutral-palette"
-            style={{ display: "flex", justifyContent: "center" }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              margin: "0",
+            }}
           >
             <NeutralPalette modifiers={["greyOne"]} className="no-click" />
             <NeutralPalette modifiers={["greyTwo"]} className="no-click" />
@@ -149,7 +384,11 @@ const ColorsTab = (props) => {
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <MenuButton
-              style={{ padding: "12px 24px", marginTop: "40px" }}
+              style={{
+                padding: "12px 24px",
+                marginTop: "80px",
+                marginBottom: "40px",
+              }}
               onClick={() =>
                 setIsExpanded({ ...isExpanded, primary: !isExpanded.primary })
               }
@@ -158,14 +397,18 @@ const ColorsTab = (props) => {
             </MenuButton>
           </div>
           {isExpanded.primary ? (
-            <div className="status-palettes" style={{ paddingTop: "60px" }}>
+            <div className="status-palettes" style={{ paddingTop: "40px" }}>
               <h5 style={{ display: "flex", justifyContent: "center" }}>
                 Success
               </h5>
 
               <div
                 className="success-palette"
-                style={{ display: "flex", justifyContent: "center" }}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginBottom: "45px",
+                }}
               >
                 <SuccessPalette modifiers={["greenOne"]} className="no-click" />
                 <SuccessPalette modifiers={["greenTwo"]} className="no-click" />
@@ -195,7 +438,13 @@ const ColorsTab = (props) => {
                   className="no-click"
                 />
               </div>
-              <h5 style={{ display: "flex", justifyContent: "center" }}>
+              <h5
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "45px",
+                }}
+              >
                 Error
               </h5>
 
@@ -213,12 +462,22 @@ const ColorsTab = (props) => {
                 <ErrorPalette modifiers={["redEight"]} className="no-click" />
                 <ErrorPalette modifiers={["redNine"]} className="no-click" />
               </div>
-              <h5 style={{ display: "flex", justifyContent: "center" }}>
+              <h5
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "45px",
+                }}
+              >
                 Warning
               </h5>
               <div
                 className="warning-palette"
-                style={{ display: "flex", justifyContent: "center" }}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  paddingBottom: "60px",
+                }}
               >
                 <WarningPalette
                   modifiers={["yellowOne"]}

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, darkTheme, lightTheme, purpleTheme } from "./systems";
 import ButtonsTab from "./components/tabs/buttonTab";
 import MenuTab from "./components/tabs/menuTab";
+import ColorsTab from "./components/tabs/colorsTab";
+import TypescaleTab from "./components/tabs/typescaleTab";
+import TypographyTab from "./components/tabs/typographyTab";
 import "./App.css";
 
 const App = () => {
@@ -27,71 +31,6 @@ const App = () => {
         height: "auto",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "flex-end",
-          marginTop: "40px",
-        }}
-      >
-        <button
-          style={{
-            // margin: "0 46px 0 46px",
-            display: "flex",
-            justifyContent: "center",
-            padding: "8px",
-            background: "none",
-            borderRadius: "50px",
-            color: useDarkTheme ? lightTheme.textColor : darkTheme.defaultText,
-          }}
-          onClick={() => {
-            setUseDarkTheme(!useDarkTheme);
-          }}
-        >
-          {useDarkTheme ? "dark mode" : "light mode"}
-        </button>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-        }}
-      >
-        <h1
-          style={{
-            margin: "46px 0 0 0",
-            fontSize: "96px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            textAlign: "left",
-          }}
-        >
-          Design Systems
-        </h1>
-        <div style={{ display: "flex", alignItems: "flex-end" }}></div>
-      </div>
-      <div>
-        <p
-          style={{
-            margin: "46px 46px 66px 46px",
-            fontFamily: "Source Sans Pro",
-            fontWeight: "300",
-            width: "50%",
-            textAlign: "left",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas
-          turpis et sapien commodo, id viverra quam pharetra. Maecenas elit
-          ligula, facilisis in odio sodales, eleifend ultricies sapien. Cras
-          nisi enim, ornare at erat eget, varius consectetur erat. Curabitur
-          feugiat ante sem, a tempor sapien volutpat at.
-        </p>
-        <div></div>
-      </div>
       <ThemeProvider
         theme={useDarkTheme ? darkTheme : lightTheme}
         className="themeToggle"
@@ -102,6 +41,74 @@ const App = () => {
         <MenuTab setIsExpanded={setIsExpanded} isExpanded={isExpanded} />
         <div
           style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "flex-end",
+            marginTop: "40px",
+          }}
+        >
+          <button
+            style={{
+              // margin: "0 46px 0 46px",
+              display: "flex",
+              justifyContent: "center",
+              padding: "8px",
+              background: "none",
+              borderRadius: "50px",
+              color: useDarkTheme
+                ? lightTheme.textColor
+                : darkTheme.defaultText,
+            }}
+            onClick={() => {
+              setUseDarkTheme(!useDarkTheme);
+            }}
+          >
+            {useDarkTheme ? "dark mode" : "light mode"}
+          </button>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+          }}
+        >
+          <h1
+            style={{
+              margin: "46px 0 0 0",
+              fontSize: "96px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              textAlign: "left",
+            }}
+          >
+            Design Systems
+          </h1>
+          <div style={{ display: "flex", alignItems: "flex-end" }}></div>
+        </div>
+        <div>
+          <p
+            style={{
+              margin: "46px 46px 66px 46px",
+              fontFamily: "Source Sans Pro",
+              fontWeight: "300",
+              width: "50%",
+              textAlign: "left",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas
+            turpis et sapien commodo, id viverra quam pharetra. Maecenas elit
+            ligula, facilisis in odio sodales, eleifend ultricies sapien. Cras
+            nisi enim, ornare at erat eget, varius consectetur erat. Curabitur
+            feugiat ante sem, a tempor sapien volutpat at.
+          </p>
+          <div></div>
+        </div>
+        <div
+          style={{
             background: useDarkTheme
               ? lightTheme.primaryBackgroundColor
               : darkTheme.primaryBackgroundColor,
@@ -110,6 +117,23 @@ const App = () => {
               : darkTheme.defaultText,
           }}
         ></div>
+
+        <Switch>
+          <Route exact path="/"></Route>
+          <Route path="/buttons">
+            <ButtonsTab />
+          </Route>
+          <Route path="/color">
+            <ColorsTab />
+          </Route>
+          <Route path="/typography">
+            <TypographyTab />
+          </Route>
+          <Route path="/typescale">
+            <TypescaleTab />
+          </Route>
+        </Switch>
+
         <GlobalStyle />
       </ThemeProvider>
     </div>
@@ -117,6 +141,10 @@ const App = () => {
 };
 
 ReactDOM.render(
-  <React.StrictMode>{<App />}</React.StrictMode>,
+  <React.StrictMode>
+    <Router>
+      <App />
+    </Router>
+  </React.StrictMode>,
   document.getElementById("root")
 );
