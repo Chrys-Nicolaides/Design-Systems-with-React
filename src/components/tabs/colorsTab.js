@@ -8,6 +8,8 @@ import PurplePalette, {
 
 import { MenuButton } from "../buttons";
 
+import StyledGradientDiv from "../themeColor";
+
 const ColorsTab = (props) => {
   let [isExpanded, setIsExpanded] = useState({
     primary: false,
@@ -25,10 +27,9 @@ const ColorsTab = (props) => {
         className="first-background"
         style={{
           backgroundImage: "linear-gradient(to bottom right, #37374E, #222534)",
-          // width: "100vw",
-          // margin: "200px",
-          marginLeft: "200px",
-          marginRight: "200px",
+          marginBottom: "120px",
+          marginLeft: "120px",
+          marginRight: "120px",
           borderRadius: "40px",
           zIndex: "1",
         }}
@@ -36,23 +37,32 @@ const ColorsTab = (props) => {
         <h1
           style={{
             paddingBottom: "30px",
-            display: "flex",
-            justifyContent: "center",
+            margin: "80px 0 0 0",
+            fontSize: "96px",
+            marginLeft: "180px",
+            textAlign: "left",
           }}
         >
           Color
         </h1>
+
         <p
           style={{
-            paddingBottom: "60px",
+            paddingBottom: "100px",
             fontFamily: "Source Sans Pro",
             fontWeight: "300",
-            // width: "50%",
             display: "flex",
             justifyContent: "center",
+            marginLeft: "180px",
+            marginRight: "180px",
           }}
         >
-          These are all my colors, oooooh
+          These are all my colors. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nam egestas turpis et sapien commodo, id viverra quam
+          pharetra. Maecenas elit ligula, facilisis in odio sodales, eleifend
+          ultricies sapien. Cras nisi enim, ornare at erat eget, varius
+          consectetur erat. Curabitur feugiat ante sem, a tempor sapien volutpat
+          at.
         </p>
         <h5
           style={{
@@ -68,8 +78,8 @@ const ColorsTab = (props) => {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginLeft: "315px",
-            marginRight: "315px",
+            marginLeft: "180px",
+            marginRight: "180px",
           }}
         >
           <PurplePalette modifiers={["purpleOne"]} className="no-click" />
@@ -87,8 +97,8 @@ const ColorsTab = (props) => {
           style={{
             display: "flex",
             flexDirection: "row",
-            marginLeft: "315px",
-            marginRight: "315px",
+            marginLeft: "180px",
+            marginRight: "180px",
             justifyContent: "space-between",
             paddingLeft: "20px",
             paddingRight: "20px",
@@ -325,8 +335,8 @@ const ColorsTab = (props) => {
           className="second-background"
           style={{
             backgroundColor: "#1B202C",
-            marginLeft: "210px",
-            marginRight: "210px",
+            marginLeft: "180px",
+            marginRight: "180px",
             borderRadius: "40px",
             marginTop: "40px",
             marginBottom: "100px",
@@ -476,7 +486,7 @@ const ColorsTab = (props) => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  paddingBottom: "60px",
+                  paddingBottom: "100px",
                 }}
               >
                 <WarningPalette

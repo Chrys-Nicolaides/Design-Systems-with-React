@@ -76,11 +76,10 @@ const App = () => {
         >
           <h1
             style={{
-              margin: "46px 0 0 0",
+              margin: "24px 0 0 0",
               fontSize: "96px",
-              marginLeft: "auto",
-              marginRight: "auto",
               textAlign: "left",
+              marginLeft: "80px",
             }}
           >
             Design Systems
@@ -90,13 +89,13 @@ const App = () => {
         <div>
           <p
             style={{
-              margin: "46px 46px 66px 46px",
               fontFamily: "Source Sans Pro",
               fontWeight: "300",
-              width: "50%",
               textAlign: "left",
-              marginLeft: "auto",
-              marginRight: "auto",
+              marginLeft: "280px",
+              marginRight: "280px",
+              marginBottom: "100px",
+              marginTop: "40px",
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas
