@@ -8,6 +8,8 @@ import {
   yellow,
   green,
   teal,
+  lightPurple,
+  darkPurple,
 } from "./colors";
 import { primaryFont } from "./typography";
 import { secondaryFont } from "./typography";
@@ -206,5 +208,10 @@ export const darkTheme = {
     yellow300: yellow[300],
     yellow200: yellow[200],
     yellow100: yellow[100],
+  },
+
+  lightPurpleTheme: {
+    lightPurple100: lightPurple[100],
+    lightPurple200: lightPurple[200],
   },
 };
