@@ -121,5 +121,6 @@ export const darkPurple = {
 
 export const lightPurple = {
   100: "#DBC4F5",
-  200: "#BDD7E5",
+  200: "#E5E7FB",
+  300: "#FFFFFF",
 };

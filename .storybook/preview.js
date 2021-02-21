@@ -7,8 +7,8 @@ import { contexts } from "./contexts";
 
 addParameters({
   backgrounds: [
-    { name: "Light theme", value: "#f7fafc", default: true },
-    { name: "Dark theme", value: "#1a202c" },
+    { name: "Light theme", value: "#DBC4F5" },
+    { name: "Dark theme", value: "#1a202c", default: true },
   ],
 });
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle, darkTheme, lightTheme, purpleTheme } from "./systems";
+import { GlobalStyle, darkTheme, lightTheme } from "./systems"; 
 import ButtonsTab from "./components/tabs/buttonTab";
 import MenuTab from "./components/tabs/menuTab";
 import ColorsTab from "./components/tabs/colorsTab";
@@ -16,16 +16,18 @@ const App = () => {
     secondary: false,
   });
   const [useDarkTheme, setUseDarkTheme] = useState(true);
+
   return (
+
     <div
       className="full-background"
       style={{
-        background: useDarkTheme
-          ? lightTheme.primaryBackgroundColor
-          : darkTheme.primaryBackgroundColor,
         color: useDarkTheme
           ? lightTheme.textColorInverted
           : darkTheme.defaultText,
+        background: useDarkTheme
+          ? lightTheme.primaryBackgroundColor
+          : darkTheme.primaryBackgroundColor,
         fontFamily: "Fira Sans Condensed",
         minHeight: "100vh",
         height: "auto",
@@ -49,7 +51,6 @@ const App = () => {
         >
           <button
             style={{
-              // margin: "0 46px 0 46px",
               display: "flex",
               justifyContent: "center",
               padding: "8px",
@@ -76,7 +77,7 @@ const App = () => {
         >
           <h1
             style={{
-              margin: "24px 0 0 0",
+              marginTop: "46px",
               fontSize: "96px",
               textAlign: "left",
               marginLeft: "80px",
@@ -104,18 +105,8 @@ const App = () => {
             nisi enim, ornare at erat eget, varius consectetur erat. Curabitur
             feugiat ante sem, a tempor sapien volutpat at.
           </p>
-          <div></div>
+          {/* <div>Hi Santhe!!!</div> */}
         </div>
-        <div
-          style={{
-            background: useDarkTheme
-              ? lightTheme.primaryBackgroundColor
-              : darkTheme.primaryBackgroundColor,
-            color: useDarkTheme
-              ? lightTheme.textColorInverted
-              : darkTheme.defaultText,
-          }}
-        ></div>
 
         <Switch>
           <Route exact path="/"></Route>
@@ -123,7 +114,9 @@ const App = () => {
             <ButtonsTab />
           </Route>
           <Route path="/color">
-            <ColorsTab />
+            <ColorsTab
+             useDarkTheme={useDarkTheme} 
+             />
           </Route>
           <Route path="/typography">
             <TypographyTab />
@@ -136,6 +129,7 @@ const App = () => {
         <GlobalStyle />
       </ThemeProvider>
     </div>
+
   );
 };
 

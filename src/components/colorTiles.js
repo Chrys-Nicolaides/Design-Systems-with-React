@@ -169,7 +169,7 @@ const Tile = styled.button`
   margin: 10px;
 `;
 
-const PurplePalette = styled(Tile)`
+export const PurplePalette = styled(Tile)`
   background-color: ${(props) => props.theme.defaultText};
 
   ${applyStyleModifiers(TILE_MODIFIERS)}
@@ -216,4 +216,3 @@ export const WarningPalette = styled(Tile)`
   ${applyStyleModifiers(TILE_MODIFIERS)}
 `;
 
-export default PurplePalette;

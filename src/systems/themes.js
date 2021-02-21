@@ -17,6 +17,8 @@ import { secondaryFont } from "./typography";
 export const lightTheme = {
   primaryColor: purple[600],
   primaryBackgroundColor: grey[900],
+  primaryBackgroundFirst: grey[800],
+  primaryBackgroundSecond: grey[900],
   primaryColorHover: purple[700],
   primaryColorFocus: purple[700],
   primaryColorActive: purple[900],
@@ -115,7 +117,9 @@ export const lightTheme = {
 
 export const darkTheme = {
   primaryColor: purple[500],
-  primaryBackgroundColor: grey[300],
+  primaryBackgroundColor: lightPurple[100],
+  primaryBackgroundFirst: lightPurple[200],
+  primaryBackgroundSecond: lightPurple[300],
   primaryColorHover: purple[600],
   primaryColorFocus: purple[600],
   primaryColorActive: purple[500],
@@ -211,7 +215,8 @@ export const darkTheme = {
   },
 
   lightPurpleTheme: {
-    lightPurple100: lightPurple[100],
-    lightPurple200: lightPurple[200],
+    lightPurple100: purple[100],
+    lightPurple200: purple[200],
+    lightPurple300: purple[300],
   },
 };
