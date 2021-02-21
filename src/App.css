@@ -21,12 +21,16 @@ h5 {
   font-family: "Source Sans Pro";
   font-size: 16px;
   font-weight: 700;
-  color: #ccd5e1;
+  /* color: #ccd5e1; */
 }
 
 h6 {
   font-family: "Source Sans Pro";
   font-size: 14px;
   font-weight: 400;
-  color: #a2aec1;
+  /* color: #a2aec1; */
+}
+
+div > button.margin-class {
+  border: 2px solid #2d3748;
 }

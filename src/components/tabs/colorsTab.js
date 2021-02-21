@@ -1,21 +1,51 @@
 import React, { useState } from "react";
-import PurplePalette, {
+import {
+  PurplePalette,
   NeutralPalette,
   SuccessPalette,
   ErrorPalette,
   WarningPalette,
 } from "../colorTiles";
-
+import { darkTheme, lightTheme } from "../../systems";
+import { ThemeProvider } from "styled-components";
 import { MenuButton } from "../buttons";
-
-import StyledGradientDiv from "../themeColor";
 
 const ColorsTab = (props) => {
   let [isExpanded, setIsExpanded] = useState({
     primary: false,
     secondary: false,
   });
-  console.log(isExpanded);
+
+  const { useDarkTheme } = props;
+
+  const colourList = [
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+  ];
+
+  const purpleNumbers = colourList.map((colourNumber) => {
+    return `purple${colourNumber}`;
+  });
+  const greyNumbers = colourList.map((colourNumber) => {
+    return `grey${colourNumber}`;
+  });
+  const greenNumbers = colourList.map((colourNumber) => {
+    return `green${colourNumber}`;
+  });
+  const redNumbers = colourList.map((colourNumber) => {
+    return `red${colourNumber}`;
+  });
+  const yellowNumbers = colourList.map((colourNumber) => {
+    return `yellow${colourNumber}`;
+  });
+
   return (
     <div
       style={{
@@ -26,8 +56,10 @@ const ColorsTab = (props) => {
       <div
         className="first-background"
         style={{
-          backgroundImage: "linear-gradient(to bottom right, #37374E, #222534)",
-          marginBottom: "120px",
+          background: useDarkTheme
+            ? lightTheme.primaryBackgroundFirst
+            : darkTheme.primaryBackgroundFirst,
+          marginBottom: "100px",
           marginLeft: "120px",
           marginRight: "120px",
           borderRadius: "40px",
@@ -43,7 +75,7 @@ const ColorsTab = (props) => {
             textAlign: "left",
           }}
         >
-          Color
+          Colors
         </h1>
 
         <p
@@ -82,15 +114,11 @@ const ColorsTab = (props) => {
             marginRight: "180px",
           }}
         >
-          <PurplePalette modifiers={["purpleOne"]} className="no-click" />
-          <PurplePalette modifiers={["purpleTwo"]} className="no-click" />
-          <PurplePalette modifiers={["purpleThree"]} className="no-click" />
-          <PurplePalette modifiers={["purpleFour"]} className="no-click" />
-          <PurplePalette modifiers={["purpleFive"]} className="no-click" />
-          <PurplePalette modifiers={["purpleSix"]} className="no-click" />
-          <PurplePalette modifiers={["purpleSeven"]} className="no-click" />
-          <PurplePalette modifiers={["purpleEight"]} className="no-click" />
-          <PurplePalette modifiers={["purpleNine"]} className="no-click" />{" "}
+          {purpleNumbers.map((colourNumber) => {
+            return (
+              <PurplePalette modifiers={colourNumber} className="no-click" />
+            );
+          })}
         </div>
         <div
           classame="color-details"
@@ -334,7 +362,7 @@ const ColorsTab = (props) => {
         <div
           className="second-background"
           style={{
-            backgroundColor: "#1B202C",
+            // backgroundColor: "#1B202C",
             marginLeft: "180px",
             marginRight: "180px",
             borderRadius: "40px",
@@ -361,19 +389,20 @@ const ColorsTab = (props) => {
               margin: "0",
             }}
           >
-            <NeutralPalette modifiers={["greyOne"]} className="no-click" />
-            <NeutralPalette modifiers={["greyTwo"]} className="no-click" />
-            <NeutralPalette modifiers={["greyThree"]} className="no-click" />
-            <NeutralPalette modifiers={["greyFour"]} className="no-click" />
-            <NeutralPalette modifiers={["greyFive"]} className="no-click" />
-            <NeutralPalette modifiers={["greySix"]} className="no-click" />
-            <NeutralPalette modifiers={["greySeven"]} className="no-click" />
-            <NeutralPalette modifiers={["greyEight"]} className="no-click" />
-            <NeutralPalette
-              modifiers={["greyNine"]}
-              className="no-click"
-              style={{ border: "2px solid #2D3748" }}
-            />
+            {greyNumbers.map((colourNumber, index) => {
+              let className = "no-click";
+
+              if (index === 8) {
+                className += " margin-class";
+              }
+
+              return (
+                <NeutralPalette
+                  modifiers={[colourNumber]}
+                  className={className}
+                />
+              );
+            })}
           </div>
           <div
             className="black-white"
@@ -384,7 +413,7 @@ const ColorsTab = (props) => {
             }}
           >
             <NeutralPalette
-              style={{ backgroundColor: "black" }}
+              style={{ backgroundColor: "black", border: "2px solid #2D3748" }}
               className="no-click"
             />
             <NeutralPalette
@@ -420,33 +449,14 @@ const ColorsTab = (props) => {
                   marginBottom: "45px",
                 }}
               >
-                <SuccessPalette modifiers={["greenOne"]} className="no-click" />
-                <SuccessPalette modifiers={["greenTwo"]} className="no-click" />
-                <SuccessPalette
-                  modifiers={["greenThree"]}
-                  className="no-click"
-                />
-                <SuccessPalette
-                  modifiers={["greenFour"]}
-                  className="no-click"
-                />
-                <SuccessPalette
-                  modifiers={["greenFive"]}
-                  className="no-click"
-                />
-                <SuccessPalette modifiers={["greenSix"]} className="no-click" />
-                <SuccessPalette
-                  modifiers={["greenSeven"]}
-                  className="no-click"
-                />
-                <SuccessPalette
-                  modifiers={["greenEight"]}
-                  className="no-click"
-                />
-                <SuccessPalette
-                  modifiers={["greenNine"]}
-                  className="no-click"
-                />
+                {greenNumbers.map((colourNumber) => {
+                  return (
+                    <SuccessPalette
+                      modifiers={[colourNumber]}
+                      className="no-click"
+                    />
+                  );
+                })}
               </div>
               <h5
                 style={{
@@ -462,15 +472,14 @@ const ColorsTab = (props) => {
                 className="error-palette"
                 style={{ display: "flex", justifyContent: "center" }}
               >
-                <ErrorPalette modifiers={["redOne"]} className="no-click" />
-                <ErrorPalette modifiers={["redTwo"]} className="no-click" />
-                <ErrorPalette modifiers={["redThree"]} className="no-click" />
-                <ErrorPalette modifiers={["redFour"]} className="no-click" />
-                <ErrorPalette modifiers={["redFive"]} className="no-click" />
-                <ErrorPalette modifiers={["redSix"]} className="no-click" />
-                <ErrorPalette modifiers={["redSeven"]} className="no-click" />
-                <ErrorPalette modifiers={["redEight"]} className="no-click" />
-                <ErrorPalette modifiers={["redNine"]} className="no-click" />
+                {redNumbers.map((colourNumber) => {
+                  return (
+                    <ErrorPalette
+                      modifiers={[colourNumber]}
+                      className="no-click"
+                    />
+                  );
+                })}
               </div>
               <h5
                 style={{
@@ -489,42 +498,14 @@ const ColorsTab = (props) => {
                   paddingBottom: "100px",
                 }}
               >
-                <WarningPalette
-                  modifiers={["yellowOne"]}
-                  className="no-click"
-                />
-                <WarningPalette
-                  modifiers={["yellowTwo"]}
-                  className="no-click"
-                />
-                <WarningPalette
-                  modifiers={["yellowThree"]}
-                  className="no-click"
-                />
-                <WarningPalette
-                  modifiers={["yellowFour"]}
-                  className="no-click"
-                />
-                <WarningPalette
-                  modifiers={["yellowFive"]}
-                  className="no-click"
-                />
-                <WarningPalette
-                  modifiers={["yellowSix"]}
-                  className="no-click"
-                />
-                <WarningPalette
-                  modifiers={["yellowSeven"]}
-                  className="no-click"
-                />
-                <WarningPalette
-                  modifiers={["yellowEight"]}
-                  className="no-click"
-                />
-                <WarningPalette
-                  modifiers={["yellowNine"]}
-                  className="no-click"
-                />
+                {yellowNumbers.map((colourNumber) => {
+                  return (
+                    <WarningPalette
+                      modifiers={[colourNumber]}
+                      className="no-click"
+                    />
+                  );
+                })}
               </div>
             </div>
           ) : (

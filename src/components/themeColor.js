@@ -4,8 +4,8 @@ import styled from "styled-components";
 const StyledGradientDiv = styled.div`
   background-image: linear-gradient(
     to right,
-    ${(props) => props.theme.lightPurple.lightPurple100},
-    ${(props) => props.theme.lightPurple.lightPurple200}
+    ${(props) => props.theme.purpleTheme.purple300},
+    ${(props) => props.theme.purpleTheme.purple800}
   );
 `;
 
