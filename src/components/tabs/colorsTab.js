@@ -7,7 +7,6 @@ import {
   WarningPalette,
 } from "../colorTiles";
 import { darkTheme, lightTheme } from "../../systems";
-import { ThemeProvider } from "styled-components";
 import { MenuButton } from "../buttons";
 
 const ColorsTab = (props) => {
@@ -45,6 +44,64 @@ const ColorsTab = (props) => {
   const yellowNumbers = colourList.map((colourNumber) => {
     return `yellow${colourNumber}`;
   });
+
+  const brandColourDetails = [
+    {
+      brandNumber: "01",
+      brandLabel: "purple-100",
+      brandHex: "#FAF5FF",
+    },
+    {
+      brandNumber: "02",
+      brandLabel: "purple-200",
+      brandHex: "#E9D8FD",
+    },
+    {
+      brandNumber: "03",
+      brandLabel: "purple-300",
+      brandHex: "#D6BCFA",
+    },
+    {
+      brandNumber: "04",
+      brandLabel: "purple-400",
+      brandHex: "#B794F4",
+    },
+    {
+      brandNumber: "05",
+      brandLabel: "purple-500",
+      brandHex: "#9F7AEA",
+    },
+    {
+      brandNumber: "06",
+      brandLabel: "purple-600",
+      brandHex: "#805AD5",
+    },
+    {
+      brandNumber: "07",
+      brandLabel: "purple-700",
+      brandHex: "#6B46C1",
+    },
+    {
+      brandNumber: "08",
+      brandLabel: "purple-800",
+      brandHex: "#553C9A",
+    },
+    {
+      brandNumber: "09",
+      brandLabel: "purple-900",
+      brandHex: "#44337A",
+    },
+  ];
+
+  const brandList = (object) => {
+    return (
+      <div className="brand-details">
+        <h5>{object.brandNumber}</h5>
+        <h6>{object.brandLabel}</h6>
+        <h6>{object.brandHex}</h6>
+      </div>
+    );
+  };
 
   return (
     <div
@@ -114,240 +171,19 @@ const ColorsTab = (props) => {
             marginRight: "180px",
           }}
         >
-          {purpleNumbers.map((colourNumber) => {
+          {purpleNumbers.map((colourNumber, index) => {
+            let className = "no-click";
+
+            if (index === 0 && useDarkTheme === false) {
+              className += " border-class-purple";
+            }
             return (
-              <PurplePalette modifiers={colourNumber} className="no-click" />
+              <PurplePalette modifiers={[colourNumber]} className={className} />
             );
           })}
         </div>
-        <div
-          classame="color-details"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            marginLeft: "180px",
-            marginRight: "180px",
-            justifyContent: "space-between",
-            paddingLeft: "20px",
-            paddingRight: "20px",
-          }}
-        >
-          <div>
-            <h5
-              style={{
-                marginTop: "18px",
-                marginBottom: "10px",
-              }}
-            >
-              01
-            </h5>
-            <h6
-              style={{
-                margin: 0,
-              }}
-            >
-              purple-100
-            </h6>
-            <h6
-              style={{
-                marginTop: 6,
-              }}
-            >
-              #FAF5FF
-            </h6>
-          </div>
-          <div>
-            <h5
-              style={{
-                marginTop: "18px",
-                marginBottom: "10px",
-              }}
-            >
-              02
-            </h5>
-            <h6
-              style={{
-                margin: 0,
-              }}
-            >
-              purple-200
-            </h6>
-            <h6
-              style={{
-                marginTop: 6,
-              }}
-            >
-              #E9D8FD
-            </h6>
-          </div>
-          <div>
-            <h5
-              style={{
-                marginTop: "18px",
-                marginBottom: "10px",
-              }}
-            >
-              03
-            </h5>
-            <h6
-              style={{
-                margin: 0,
-              }}
-            >
-              purple-300
-            </h6>
-            <h6
-              style={{
-                marginTop: 6,
-              }}
-            >
-              #D6BCFA
-            </h6>
-          </div>
-          <div>
-            <h5
-              style={{
-                marginTop: "18px",
-                marginBottom: "10px",
-              }}
-            >
-              04
-            </h5>
-            <h6
-              style={{
-                margin: 0,
-              }}
-            >
-              purple-400
-            </h6>
-            <h6
-              style={{
-                marginTop: 6,
-              }}
-            >
-              #B794F4
-            </h6>
-          </div>
-          <div>
-            <h5
-              style={{
-                marginTop: "18px",
-                marginBottom: "10px",
-              }}
-            >
-              05
-            </h5>
-            <h6
-              style={{
-                margin: 0,
-              }}
-            >
-              purple-500
-            </h6>
-            <h6
-              style={{
-                marginTop: 6,
-              }}
-            >
-              #9F7AEA
-            </h6>
-          </div>
-          <div>
-            <h5
-              style={{
-                marginTop: "18px",
-                marginBottom: "10px",
-              }}
-            >
-              06
-            </h5>
-            <h6
-              style={{
-                margin: 0,
-              }}
-            >
-              purple-600
-            </h6>
-            <h6
-              style={{
-                marginTop: 6,
-              }}
-            >
-              #805AD5
-            </h6>
-          </div>
-          <div>
-            <h5
-              style={{
-                marginTop: "18px",
-                marginBottom: "10px",
-              }}
-            >
-              07
-            </h5>
-            <h6
-              style={{
-                margin: 0,
-              }}
-            >
-              purple-700
-            </h6>
-            <h6
-              style={{
-                marginTop: 6,
-              }}
-            >
-              #6B46C1
-            </h6>
-          </div>
-          <div>
-            <h5
-              style={{
-                marginTop: "18px",
-                marginBottom: "10px",
-              }}
-            >
-              08
-            </h5>
-            <h6
-              style={{
-                margin: 0,
-              }}
-            >
-              purple-800
-            </h6>
-            <h6
-              style={{
-                marginTop: 6,
-              }}
-            >
-              #553C9A
-            </h6>
-          </div>
-          <div>
-            <h5
-              style={{
-                marginTop: "18px",
-                marginBottom: "10px",
-              }}
-            >
-              09
-            </h5>
-            <h6
-              style={{
-                margin: 0,
-              }}
-            >
-              purple-900
-            </h6>
-            <h6
-              style={{
-                marginTop: 6,
-              }}
-            >
-              #44337A
-            </h6>
-          </div>
+        <div className="color-details">
+          {brandColourDetails.map((item) => brandList(item))}
         </div>
         <h5
           style={{
@@ -362,7 +198,9 @@ const ColorsTab = (props) => {
         <div
           className="second-background"
           style={{
-            // backgroundColor: "#1B202C",
+            background: useDarkTheme
+              ? lightTheme.primaryBackgroundSecond
+              : darkTheme.primaryBackgroundSecond,
             marginLeft: "180px",
             marginRight: "180px",
             borderRadius: "40px",
@@ -393,7 +231,19 @@ const ColorsTab = (props) => {
               let className = "no-click";
 
               if (index === 8) {
-                className += " margin-class";
+                className += " border-class-dark";
+              }
+
+              if (index === 0 && useDarkTheme === false) {
+                className += " border-class-light";
+              }
+
+              if (index === 1 && useDarkTheme === false) {
+                className += " border-class-light";
+              }
+
+              if (index === 2 && useDarkTheme === false) {
+                className += " border-class-light";
               }
 
               return (
@@ -413,12 +263,12 @@ const ColorsTab = (props) => {
             }}
           >
             <NeutralPalette
-              style={{ backgroundColor: "black", border: "2px solid #2D3748" }}
-              className="no-click"
+              style={{ backgroundColor: "white" }}
+              className="no-click border-class-light"
             />
             <NeutralPalette
-              style={{ backgroundColor: "white" }}
-              className="no-click"
+              style={{ backgroundColor: "black" }}
+              className="no-click border-class-dark"
             />
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>

@@ -112,15 +112,3 @@ export const teal = {
   800: "#285e61",
   900: "#234e52",
 };
-
-export const darkPurple = {
-  100: "#625A81",
-  200: "#413C57",
-  300: "#202634",
-};
-
-export const lightPurple = {
-  100: "#DBC4F5",
-  200: "#E5E7FB",
-  300: "#FFFFFF",
-};
