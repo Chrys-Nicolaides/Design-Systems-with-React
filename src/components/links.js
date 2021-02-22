@@ -1,10 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import { BrowserRouter as Link } from "react-router-dom";
-
-// const DefaultLink = styled.link`
-//   color: ${(props) => props.theme.lightColor};
-// `;
 
 const StyledLink = styled.div`
   a {

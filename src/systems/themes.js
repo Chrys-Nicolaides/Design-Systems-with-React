@@ -1,15 +1,13 @@
 import {
-  blue,
-  indigo,
+  // blue,
+  // indigo,
   purple,
-  pink,
+  // pink,
   grey,
   red,
   yellow,
   green,
-  teal,
-  lightPurple,
-  darkPurple,
+  // teal,
 } from "./colors";
 import { primaryFont } from "./typography";
 import { secondaryFont } from "./typography";
@@ -117,9 +115,9 @@ export const lightTheme = {
 
 export const darkTheme = {
   primaryColor: purple[500],
-  primaryBackgroundColor: lightPurple[100],
-  primaryBackgroundFirst: lightPurple[200],
-  primaryBackgroundSecond: lightPurple[300],
+  primaryBackgroundColor: purple[300],
+  primaryBackgroundFirst: purple[200],
+  primaryBackgroundSecond: purple[100],
   primaryColorHover: purple[600],
   primaryColorFocus: purple[600],
   primaryColorActive: purple[500],
@@ -212,11 +210,5 @@ export const darkTheme = {
     yellow300: yellow[300],
     yellow200: yellow[200],
     yellow100: yellow[100],
-  },
-
-  lightPurpleTheme: {
-    lightPurple100: purple[100],
-    lightPurple200: purple[200],
-    lightPurple300: purple[300],
   },
 };
