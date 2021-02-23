@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle, darkTheme, lightTheme } from "./systems"; 
+import { GlobalStyle, darkTheme, lightTheme } from "./systems";
 import ButtonsTab from "./components/tabs/buttonTab";
 import MenuTab from "./components/tabs/menuTab";
 import ColorsTab from "./components/tabs/colorsTab";
@@ -18,7 +18,6 @@ const App = () => {
   const [useDarkTheme, setUseDarkTheme] = useState(true);
 
   return (
-
     <div
       className="full-background"
       style={{
@@ -50,6 +49,7 @@ const App = () => {
           }}
         >
           <button
+            className="theme-button"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -80,7 +80,7 @@ const App = () => {
               marginTop: "46px",
               fontSize: "96px",
               textAlign: "left",
-              marginLeft: "80px",
+              marginLeft: "100px",
             }}
           >
             Design Systems
@@ -114,9 +114,7 @@ const App = () => {
             <ButtonsTab />
           </Route>
           <Route path="/color">
-            <ColorsTab
-             useDarkTheme={useDarkTheme} 
-             />
+            <ColorsTab useDarkTheme={useDarkTheme} />
           </Route>
           <Route path="/typography">
             <TypographyTab />
@@ -129,7 +127,6 @@ const App = () => {
         <GlobalStyle />
       </ThemeProvider>
     </div>
-
   );
 };
 
