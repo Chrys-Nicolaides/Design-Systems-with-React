@@ -128,20 +128,17 @@ const ColorsTab = (props) => {
           {purpleNumbers.map((colourNumber, index) => {
             let className = "no-click";
 
-            if (index === 0 && useDarkTheme === false) {
+            if (
+              useDarkTheme === false &&
+              (index === 0 || index === 1 || index === 2)
+            ) {
               className += " border-class-purple";
-            } else if (index === 1 && useDarkTheme === false) {
-              className += " border-class-purple";
-            } else if (index === 2 && useDarkTheme === false) {
-              className += " border-class-purple";
-            } else if (index === 7 && useDarkTheme === true) {
-              className += " border-class-purple-dark";
-            } else if (index === 8 && useDarkTheme === true) {
+            } else if (useDarkTheme === true && (index === 7 || index === 8)) {
               className += " border-class-purple-dark";
             }
 
             return (
-              <PurplePalette modifiers={[colourNumber]} className={className} />
+              <PurplePalette modifiers={colourNumber} className={className} />
             );
           })}
         </div>
@@ -166,17 +163,16 @@ const ColorsTab = (props) => {
                 className += " border-class-dark";
               }
 
-              if (index === 0 && useDarkTheme === false) {
-                className += " border-class-light";
-              } else if (index === 1 && useDarkTheme === false) {
-                className += " border-class-light";
-              } else if (index === 2 && useDarkTheme === false) {
+              if (
+                useDarkTheme === false &&
+                (index === 0 || index === 1 || index === 2)
+              ) {
                 className += " border-class-light";
               }
 
               return (
                 <NeutralPalette
-                  modifiers={[colourNumber]}
+                  modifiers={colourNumber}
                   className={className}
                 />
               );

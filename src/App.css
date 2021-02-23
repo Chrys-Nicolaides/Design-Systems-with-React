@@ -13,8 +13,42 @@
   justify-content: flex-end;
 }
 
+.theme-button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: -82px;
+  margin-right: 46px;
+}
+
 .theme-button {
   outline: none;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  background: none;
+  border-radius: 50px;
+}
+
+.home-page-div {
+  margin-top: 80px;
+  margin-left: 200px;
+}
+
+.home-page-div h1 {
+  font-size: 96px;
+  text-align: left;
+  margin-left: 100px;
+}
+
+.home-page-div p {
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  text-align: left;
+  margin-left: 100px;
+  margin-right: 280px;
+  margin-bottom: 160px;
+  margin-top: 0px;
 }
 
 .no-click {
@@ -26,6 +60,9 @@
   min-height: 100%;
   width: 100%;
   overflow-x: hidden;
+  font-family: "Fira Sans Condensed";
+  min-height: 100vh;
+  height: auto;
 }
 
 /* colorsTab */
@@ -197,3 +234,34 @@ div > button.border-class-purple {
 div > button.border-class-purple-dark {
   border: 2px solid #6b46c1;
 }
+
+/* menuTab */
+
+.project-name {
+  display: flex;
+  align-items: baseline;
+  margin-left: 46px;
+}
+
+.project-name h5 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.project-name h6 {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: baseline;
+}
+
+.menu-tabs {
+  display: flex;
+  flex-direction: row;
+  margin-left: 120px;
+}
+
+/* buttons-tab */
