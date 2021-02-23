@@ -104,48 +104,17 @@ const ColorsTab = (props) => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
+    <div className="colors-tab">
       <div
         className="first-background"
         style={{
           background: useDarkTheme
             ? lightTheme.primaryBackgroundFirst
             : darkTheme.primaryBackgroundFirst,
-          marginBottom: "100px",
-          marginLeft: "120px",
-          marginRight: "120px",
-          borderRadius: "40px",
-          zIndex: "1",
         }}
       >
-        <h1
-          style={{
-            paddingBottom: "30px",
-            margin: "80px 0 0 0",
-            fontSize: "96px",
-            marginLeft: "180px",
-            textAlign: "left",
-          }}
-        >
-          Colors
-        </h1>
-
-        <p
-          style={{
-            paddingBottom: "100px",
-            fontFamily: "Source Sans Pro",
-            fontWeight: "300",
-            display: "flex",
-            justifyContent: "center",
-            marginLeft: "180px",
-            marginRight: "180px",
-          }}
-        >
+        <h1>Colors</h1>
+        <p>
           These are all my colors. Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Nam egestas turpis et sapien commodo, id viverra quam
           pharetra. Maecenas elit ligula, facilisis in odio sodales, eleifend
@@ -153,30 +122,24 @@ const ColorsTab = (props) => {
           consectetur erat. Curabitur feugiat ante sem, a tempor sapien volutpat
           at.
         </p>
-        <h5
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          Brand Colors
-        </h5>
+        <h5>Brand Colors</h5>
 
-        <div
-          className="purple-palette"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginLeft: "180px",
-            marginRight: "180px",
-          }}
-        >
+        <div className="purple-palette">
           {purpleNumbers.map((colourNumber, index) => {
             let className = "no-click";
 
             if (index === 0 && useDarkTheme === false) {
               className += " border-class-purple";
+            } else if (index === 1 && useDarkTheme === false) {
+              className += " border-class-purple";
+            } else if (index === 2 && useDarkTheme === false) {
+              className += " border-class-purple";
+            } else if (index === 7 && useDarkTheme === true) {
+              className += " border-class-purple-dark";
+            } else if (index === 8 && useDarkTheme === true) {
+              className += " border-class-purple-dark";
             }
+
             return (
               <PurplePalette modifiers={[colourNumber]} className={className} />
             );
@@ -185,48 +148,17 @@ const ColorsTab = (props) => {
         <div className="color-details">
           {brandColourDetails.map((item) => brandList(item))}
         </div>
-        <h5
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "95px",
-            marginBottom: "35px",
-          }}
-        >
-          Other Colors
-        </h5>
+        <h5 className="other-colors">Other Colors</h5>
         <div
           className="second-background"
           style={{
             background: useDarkTheme
               ? lightTheme.primaryBackgroundSecond
               : darkTheme.primaryBackgroundSecond,
-            marginLeft: "180px",
-            marginRight: "180px",
-            borderRadius: "40px",
-            marginTop: "40px",
-            marginBottom: "100px",
-            paddingTop: "60px",
           }}
         >
-          <h5
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginTop: "0",
-              marginBottom: "45px",
-            }}
-          >
-            Neutral
-          </h5>
-          <div
-            className="neutral-palette"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              margin: "0",
-            }}
-          >
+          <h5>Neutral</h5>
+          <div className="neutral-palette">
             {greyNumbers.map((colourNumber, index) => {
               let className = "no-click";
 
@@ -236,13 +168,9 @@ const ColorsTab = (props) => {
 
               if (index === 0 && useDarkTheme === false) {
                 className += " border-class-light";
-              }
-
-              if (index === 1 && useDarkTheme === false) {
+              } else if (index === 1 && useDarkTheme === false) {
                 className += " border-class-light";
-              }
-
-              if (index === 2 && useDarkTheme === false) {
+              } else if (index === 2 && useDarkTheme === false) {
                 className += " border-class-light";
               }
 
@@ -254,14 +182,7 @@ const ColorsTab = (props) => {
               );
             })}
           </div>
-          <div
-            className="black-white"
-            style={{
-              paddingTop: "30px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
+          <div className="black-white">
             <NeutralPalette
               style={{ backgroundColor: "white" }}
               className="no-click border-class-light"
@@ -271,13 +192,9 @@ const ColorsTab = (props) => {
               className="no-click border-class-dark"
             />
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="menu-button-div">
             <MenuButton
-              style={{
-                padding: "12px 24px",
-                marginTop: "80px",
-                marginBottom: "40px",
-              }}
+              className="menu-button"
               onClick={() =>
                 setIsExpanded({ ...isExpanded, primary: !isExpanded.primary })
               }
@@ -286,19 +203,10 @@ const ColorsTab = (props) => {
             </MenuButton>
           </div>
           {isExpanded.primary ? (
-            <div className="status-palettes" style={{ paddingTop: "40px" }}>
-              <h5 style={{ display: "flex", justifyContent: "center" }}>
-                Success
-              </h5>
+            <div className="status-palettes">
+              <h5>Success</h5>
 
-              <div
-                className="success-palette"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  marginBottom: "45px",
-                }}
-              >
+              <div className="success-palette">
                 {greenNumbers.map((colourNumber) => {
                   return (
                     <SuccessPalette
@@ -308,20 +216,9 @@ const ColorsTab = (props) => {
                   );
                 })}
               </div>
-              <h5
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  marginTop: "45px",
-                }}
-              >
-                Error
-              </h5>
+              <h5 className="error-label">Error</h5>
 
-              <div
-                className="error-palette"
-                style={{ display: "flex", justifyContent: "center" }}
-              >
+              <div className="error-palette">
                 {redNumbers.map((colourNumber) => {
                   return (
                     <ErrorPalette
@@ -331,23 +228,8 @@ const ColorsTab = (props) => {
                   );
                 })}
               </div>
-              <h5
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  marginTop: "45px",
-                }}
-              >
-                Warning
-              </h5>
-              <div
-                className="warning-palette"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  paddingBottom: "100px",
-                }}
-              >
+              <h5 className="warning-label">Warning</h5>
+              <div className="warning-palette">
                 {yellowNumbers.map((colourNumber) => {
                   return (
                     <WarningPalette

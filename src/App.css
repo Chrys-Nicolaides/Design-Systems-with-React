@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 
+/* index / App */
+
 .project-name {
   display: flex;
   margin-left: 0px;
@@ -9,6 +11,10 @@
   text-align: left;
   display: flex;
   justify-content: flex-end;
+}
+
+.theme-button {
+  outline: none;
 }
 
 .no-click {
@@ -22,12 +28,61 @@
   overflow-x: hidden;
 }
 
+/* colorsTab */
+
+.colors-tab {
+  display: flex;
+  justify-content: center;
+}
+
+.first-background {
+  margin-bottom: 100px;
+  margin-left: 120px;
+  margin-right: 120px;
+  border-radius: 40px;
+  z-index: 1;
+}
+
+.first-background h1 {
+  padding-bottom: 30px;
+  margin: 80px 0 0 0;
+  font-size: 96px;
+  margin-left: 180px;
+  text-align: left;
+}
+
+.first-background p {
+  padding-bottom: 100px;
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+.first-background h5 {
+  display: flex;
+  justify-content: center;
+}
+
+.purple-palette {
+  display: flex;
+  justify-content: center;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+.other-colors {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  margin-bottom: 40px;
+}
+
 .color-details {
   display: flex;
-  /* display: grid; */
-  /* grid-template-columns: auto auto auto auto auto auto auto auto auto; */
   flex-direction: row;
-  /* flex-wrap: nowrap; */
   margin-left: 180px;
   margin-right: 180px;
   justify-content: space-between;
@@ -51,6 +106,82 @@
   margin: 0;
 }
 
+.second-background {
+  margin-right: 180px;
+  margin-left: 180px;
+  border-radius: 40px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  padding-top: 60px;
+}
+
+.second-background h5 {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 45px;
+}
+
+.neutral-palette {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.black-white {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-button {
+  padding: 12px 24px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.status-palettes {
+  padding-top: 40px;
+}
+
+.status-palettes h5 {
+  display: flex;
+  justify-content: center;
+}
+
+.success-palette {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.success-palette h5 {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.error-palette {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.warning-label {
+  margin-top: 45px;
+}
+
+.warning-palette {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
 div > button.border-class-dark {
   border: 2px solid #2d3748;
 }
@@ -61,4 +192,8 @@ div > button.border-class-light {
 
 div > button.border-class-purple {
   border: 2px solid #b794f4;
+}
+
+div > button.border-class-purple-dark {
+  border: 2px solid #6b46c1;
 }
