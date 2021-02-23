@@ -15,33 +15,15 @@ const MenuTab = (props) => {
         color: useDarkTheme ? lightTheme.textColor : darkTheme.textColor,
       }}
     >
-      <div
-      // className="menu-tabs"
-      // style={{
-      //   display: "flex",
-      //   flexDirection: "row",
-      //   paddingRight: "100px",
-      //   marginLeft: "166px",
-      //   textAlign: "left",
-      //   paddingTop: "40px",
-      //   color: useDarkTheme
-      //     ? lightTheme.textColorInverted
-      //     : darkTheme.defaultText,
-      // }}
-      >
+      <div className="nav-menu">
         <div className="project-name">
           <h5>Design</h5>
-          <h5>Systems</h5>
+          <h6>Systems</h6>
         </div>
+
         <div
           className="menu-tabs"
           style={{
-            display: "flex",
-            flexDirection: "row",
-            paddingRight: "100px",
-            marginLeft: "166px",
-            textAlign: "left",
-            paddingTop: "40px",
             color: useDarkTheme
               ? lightTheme.textColorInverted
               : darkTheme.defaultText,
