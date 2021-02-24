@@ -23,8 +23,6 @@
 
 .theme-button {
   outline: none;
-  display: flex;
-  justify-content: center;
   padding: 12px;
   background: none;
   border-radius: 50px;
@@ -65,12 +63,12 @@
   height: auto;
 }
 
-/* colorsTab */
-
-.colors-tab {
+.flex {
   display: flex;
   justify-content: center;
 }
+
+/* colorsTab */
 
 .first-background {
   margin-bottom: 100px;
@@ -81,10 +79,10 @@
 }
 
 .first-background h1 {
-  padding-bottom: 30px;
-  margin: 80px 0 0 0;
   font-size: 96px;
+  margin-top: 80px;
   margin-left: 180px;
+  padding-bottom: 30px;
   text-align: left;
 }
 
@@ -92,27 +90,16 @@
   padding-bottom: 100px;
   font-family: "Source Sans Pro";
   font-weight: 300;
-  display: flex;
-  justify-content: center;
   margin-left: 180px;
   margin-right: 180px;
 }
 
-.first-background h5 {
-  display: flex;
-  justify-content: center;
-}
-
 .purple-palette {
-  display: flex;
-  justify-content: center;
   margin-left: 180px;
   margin-right: 180px;
 }
 
 .other-colors {
-  display: flex;
-  justify-content: center;
   padding-top: 100px;
   margin-bottom: 40px;
 }
@@ -153,59 +140,37 @@
 }
 
 .second-background h5 {
-  display: flex;
-  justify-content: center;
   margin-top: 0;
   margin-bottom: 45px;
 }
 
 .neutral-palette {
-  display: flex;
-  justify-content: center;
   margin: 0;
 }
 
 .black-white {
   padding-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.menu-button-div {
-  display: flex;
-  justify-content: center;
 }
 
 .menu-button {
   padding: 12px 24px;
-  margin-top: 80px;
-  margin-bottom: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .status-palettes {
   padding-top: 40px;
 }
 
-.status-palettes h5 {
-  display: flex;
-  justify-content: center;
-}
-
 .success-palette {
-  display: flex;
-  justify-content: center;
   margin-bottom: 45px;
 }
 
 .success-palette h5 {
-  display: flex;
-  justify-content: center;
   margin-top: 45px;
 }
 
 .error-palette {
-  display: flex;
-  justify-content: center;
   margin-bottom: 45px;
 }
 
@@ -214,8 +179,6 @@
 }
 
 .warning-palette {
-  display: flex;
-  justify-content: center;
   padding-bottom: 100px;
 }
 
@@ -265,3 +228,61 @@ div > button.border-class-purple-dark {
 }
 
 /* buttons-tab */
+
+.all-buttons {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: column;
+}
+.clickable-buttons {
+  margin-left: 300px;
+  margin-right: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-buttons {
+  margin-left: 240px;
+  margin-right: 240px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.static-buttons,
+.button-labels,
+.hidden-status-buttons {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.buttons-visible {
+  margin-bottom: 180px;
+}
+
+.button-labels {
+  margin-bottom: 40px;
+}
+
+.buttons-subheading {
+  margin-bottom: 80px;
+}
+
+.primary-buttons,
+.secondary-buttons,
+.tertiary-buttons,
+.success-buttons,
+.warning-buttons,
+.error-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.secondary-success-static-buttons button,
+.secondary-warning-static-buttons button,
+.secondary-error-static-buttons button {
+  margin-bottom: 40px;
+}

@@ -104,7 +104,7 @@ const ColorsTab = (props) => {
   };
 
   return (
-    <div className="colors-tab">
+    <div className="colors-tab flex">
       <div
         className="first-background"
         style={{
@@ -122,7 +122,7 @@ const ColorsTab = (props) => {
           consectetur erat. Curabitur feugiat ante sem, a tempor sapien volutpat
           at.
         </p>
-        <h5>Brand Colors</h5>
+        <h5 className="flex">Brand Colors</h5>
 
         <div className="purple-palette">
           {purpleNumbers.map((colourNumber, index) => {
@@ -145,7 +145,7 @@ const ColorsTab = (props) => {
         <div className="color-details">
           {brandColourDetails.map((item) => brandList(item))}
         </div>
-        <h5 className="other-colors">Other Colors</h5>
+        <h5 className="other-colors flex">Other Colors</h5>
         <div
           className="second-background"
           style={{
@@ -154,8 +154,8 @@ const ColorsTab = (props) => {
               : darkTheme.primaryBackgroundSecond,
           }}
         >
-          <h5>Neutral</h5>
-          <div className="neutral-palette">
+          <h5 className="flex">Neutral</h5>
+          <div className="neutral-palette flex">
             {greyNumbers.map((colourNumber, index) => {
               let className = "no-click";
 
@@ -178,7 +178,7 @@ const ColorsTab = (props) => {
               );
             })}
           </div>
-          <div className="black-white">
+          <div className="black-white flex">
             <NeutralPalette
               style={{ backgroundColor: "white" }}
               className="no-click border-class-light"
@@ -188,21 +188,21 @@ const ColorsTab = (props) => {
               className="no-click border-class-dark"
             />
           </div>
-          <div className="menu-button-div">
+          <div className="menu-button-div flex">
             <MenuButton
               className="menu-button"
               onClick={() =>
                 setIsExpanded({ ...isExpanded, primary: !isExpanded.primary })
               }
             >
-              show all
+              {isExpanded.primary ? "hide" : "show all"}
             </MenuButton>
           </div>
           {isExpanded.primary ? (
             <div className="status-palettes">
-              <h5>Success</h5>
+              <h5 className="flex">Success</h5>
 
-              <div className="success-palette">
+              <div className="success-palette flex">
                 {greenNumbers.map((colourNumber) => {
                   return (
                     <SuccessPalette
@@ -212,9 +212,9 @@ const ColorsTab = (props) => {
                   );
                 })}
               </div>
-              <h5 className="error-label">Error</h5>
+              <h5 className="error-label flex">Error</h5>
 
-              <div className="error-palette">
+              <div className="error-palette flex">
                 {redNumbers.map((colourNumber) => {
                   return (
                     <ErrorPalette
@@ -224,8 +224,8 @@ const ColorsTab = (props) => {
                   );
                 })}
               </div>
-              <h5 className="warning-label">Warning</h5>
-              <div className="warning-palette">
+              <h5 className="warning-label flex">Warning</h5>
+              <div className="warning-palette flex">
                 {yellowNumbers.map((colourNumber) => {
                   return (
                     <WarningPalette
