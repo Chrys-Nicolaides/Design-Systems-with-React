@@ -39,7 +39,7 @@ const App = () => {
         <MenuTab setIsExpanded={setIsExpanded} isExpanded={isExpanded} />
         <div className="theme-button-div">
           <button
-            className="theme-button"
+            className="theme-button flex"
             style={{
               color: useDarkTheme
                 ? lightTheme.textColor
@@ -70,7 +70,7 @@ const App = () => {
         <Switch>
           <Route exact path="/"></Route>
           <Route path="/buttons">
-            <ButtonsTab />
+            <ButtonsTab useDarkTheme={useDarkTheme} />
           </Route>
           <Route path="/color">
             <ColorsTab useDarkTheme={useDarkTheme} />
