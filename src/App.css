@@ -23,9 +23,28 @@
 
 .theme-button {
   outline: none;
+  border: none;
   padding: 12px;
   background: none;
-  border-radius: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.MoonIcon {
+  stroke: #e8d8fe;
+  stroke-width: 2px;
+}
+
+.SunIcon {
+  fill: #7f5bd8;
+  stroke-width: 2px;
+}
+
+svg {
+  margin-left: 10px;
 }
 
 .home-page-div {
@@ -100,8 +119,9 @@
 }
 
 .other-colors {
-  padding-top: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+  margin-top: 0;
+  font-weight: 500;
 }
 
 .color-details {
@@ -112,6 +132,10 @@
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.brand-details {
+  margin-bottom: 80px;
 }
 
 .brand-details h5 {
@@ -134,7 +158,6 @@
   margin-right: 180px;
   margin-left: 180px;
   border-radius: 40px;
-  /* margin-top: 40px; */
   margin-bottom: 100px;
   padding-top: 60px;
 }
@@ -264,10 +287,17 @@ div > button.border-class-purple-dark {
 
 .button-labels {
   margin-bottom: 40px;
+  font-weight: 400;
 }
 
 .buttons-subheading {
   margin-bottom: 80px;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.hidden-status-buttons {
+  margin-bottom: 60px;
 }
 
 .primary-buttons,

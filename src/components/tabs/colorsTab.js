@@ -97,8 +97,24 @@ const ColorsTab = (props) => {
     return (
       <div className="brand-details">
         <h5>{object.brandNumber}</h5>
-        <h6>{object.brandLabel}</h6>
-        <h6>{object.brandHex}</h6>
+        <h6
+          style={{
+            color: useDarkTheme
+              ? lightTheme.disabledBackgroundColor
+              : darkTheme.disabledBackgroundColor,
+          }}
+        >
+          {object.brandLabel}
+        </h6>
+        <h6
+          style={{
+            color: useDarkTheme
+              ? lightTheme.disabledBackgroundColor
+              : darkTheme.disabledBackgroundColor,
+          }}
+        >
+          {object.brandHex}
+        </h6>
       </div>
     );
   };
@@ -113,7 +129,7 @@ const ColorsTab = (props) => {
             : darkTheme.primaryBackgroundFirst,
         }}
       >
-        <h1>Colors</h1>
+        <h1>{props.title}</h1>
         <p>
           These are all my colors. Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Nam egestas turpis et sapien commodo, id viverra quam
@@ -145,15 +161,19 @@ const ColorsTab = (props) => {
         <div className="color-details">
           {brandColourDetails.map((item) => brandList(item))}
         </div>
-        <h5 className="other-colors flex">Other Colors</h5>
         <div
           className="second-background"
           style={{
             background: useDarkTheme
               ? lightTheme.primaryBackgroundSecond
               : darkTheme.primaryBackgroundSecond,
+            color: useDarkTheme
+              ? lightTheme.disabledBackgroundColor
+              : darkTheme.disabledBackgroundColor,
           }}
         >
+          <h3 className="other-colors flex">Other Colors</h3>
+
           <h5 className="flex">Neutral</h5>
           <div className="neutral-palette flex">
             {greyNumbers.map((colourNumber, index) => {

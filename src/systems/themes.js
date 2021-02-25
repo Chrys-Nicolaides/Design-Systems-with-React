@@ -31,6 +31,9 @@ export const lightTheme = {
   textOnDisabled: grey[200],
   defaultText: grey[900],
   lightColor: grey[100],
+  menuTabColor: grey[800],
+  projectName: grey[400],
+  themeButton: purple[200],
   primaryFont,
   secondaryFont,
 
@@ -133,6 +136,9 @@ export const darkTheme = {
   textOnDisabled: grey[500],
   defaultText: grey[900],
   lightColor: grey[100],
+  menuTabColor: grey[600],
+  projectName: grey[800],
+  themeButton: purple[700],
   primaryFont,
   secondaryFont,
 

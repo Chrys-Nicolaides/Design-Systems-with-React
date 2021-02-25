@@ -187,7 +187,6 @@ const BUTTON_MODIFIERS = {
   MenuButton: ({ theme }) => `
   background: none;
   border: 1.8px solid rgba(128, 128, 128, 0);
-  color: ${theme.lightColor};
   text-decoration: none;
 
   &:hover,
@@ -361,7 +360,6 @@ export const TertiaryButton = styled(Button)`
 export const MenuButton = styled(Button)`
   background: none;
   border: 1.8px solid rgba(128, 128, 128, 0);
-  color: ${(props) => props.theme.lightColor};
 
   &:hover,
   &:focus {
@@ -372,7 +370,7 @@ export const MenuButton = styled(Button)`
 
   &:active {
     background: none;
-    border: 1.8px solid ${(props) => props.theme.secondaryColor};
+    border: 1.8px solid ${(props) => props.theme.primaryBackgroundFirst};
     color: ${(props) => props.theme.secondaryColor};
   }
 `;
