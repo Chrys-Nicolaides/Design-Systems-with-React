@@ -5,18 +5,22 @@ import { darkTheme, lightTheme } from "../../systems";
 import { ThemeProvider } from "styled-components";
 
 const MenuTab = (props) => {
-  const [useDarkTheme, setUseDarkTheme] = useState(true);
+  const { useDarkTheme } = props;
 
   return (
     <ThemeProvider
       theme={useDarkTheme ? darkTheme : lightTheme}
       className="themeToggle"
-      style={{
-        color: useDarkTheme ? lightTheme.textColor : darkTheme.textColor,
-      }}
     >
       <div className="nav-menu">
-        <div className="project-name">
+        <div
+          className="project-name"
+          style={{
+            color: useDarkTheme
+              ? lightTheme.projectName
+              : darkTheme.projectName,
+          }}
+        >
           <h5>Design</h5>
           <h6>Systems</h6>
         </div>
@@ -25,16 +29,22 @@ const MenuTab = (props) => {
           className="menu-tabs"
           style={{
             color: useDarkTheme
-              ? lightTheme.textColorInverted
-              : darkTheme.defaultText,
+              ? lightTheme.disabledBackgroundColor
+              : darkTheme.disabledBackgroundColor,
           }}
         >
-          <StyledLink>
+          <StyledLink
+            style={{
+              color: useDarkTheme
+                ? lightTheme.disabledBackgroundColor
+                : darkTheme.disabledBackgroundColor,
+            }}
+          >
             <Link to="/buttons">{props.ButtonsTab}Buttons</Link>
           </StyledLink>
 
           <StyledLink>
-            <Link to="/color">{props.ColorsTab}Color</Link>
+            <Link to="/color">{props.ColorsTab}Colors</Link>
           </StyledLink>
 
           <StyledLink>

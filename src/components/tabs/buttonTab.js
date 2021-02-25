@@ -12,7 +12,7 @@ const ButtonsTab = (props) => {
     secondary: false,
   });
 
-  const { useDarkTheme } = props;
+  const { useDarkTheme, title } = props;
 
   return (
     <div className="buttons-tab flex">
@@ -24,7 +24,7 @@ const ButtonsTab = (props) => {
             : darkTheme.primaryBackgroundFirst,
         }}
       >
-        <h1>Buttons</h1>
+        <h1>{title}</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas
           turpis et sapien commodo, id viverra quam pharetra. Maecenas elit
@@ -55,6 +55,11 @@ const ButtonsTab = (props) => {
 
           <div className="menu-button flex">
             <MenuButton
+              style={{
+                color: useDarkTheme
+                  ? lightTheme.lightColor
+                  : darkTheme.defaultText,
+              }}
               onClick={() =>
                 setIsExpanded({ ...isExpanded, primary: !isExpanded.primary })
               }
@@ -103,18 +108,14 @@ const ButtonsTab = (props) => {
               background: useDarkTheme
                 ? lightTheme.primaryBackgroundSecond
                 : darkTheme.primaryBackgroundSecond,
+              color: useDarkTheme
+                ? lightTheme.disabledBackgroundColor
+                : darkTheme.disabledBackgroundColor,
             }}
           >
             <h3 className="buttons-subheading flex">Button States</h3>
             <div>
-              <div
-                className="button-labels"
-                style={{
-                  color: useDarkTheme
-                    ? lightTheme.disabledBackgroundColor
-                    : darkTheme.disabledBackgroundColor,
-                }}
-              >
+              <div className="button-labels">
                 <div>Default</div>
                 <div>Hover</div>
                 <div>Active</div>
@@ -252,6 +253,11 @@ const ButtonsTab = (props) => {
               </div>
               <div className="menu-button flex">
                 <MenuButton
+                  style={{
+                    color: useDarkTheme
+                      ? lightTheme.lightColor
+                      : darkTheme.defaultText,
+                  }}
                   onClick={() =>
                     setIsExpanded({
                       ...isExpanded,

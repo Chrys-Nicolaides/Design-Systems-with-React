@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledLink = styled.div`
   a {
-    color: ${(props) => props.theme.lightColor};
+    color: ${(props) => props.theme.menuTabColor};
     text-decoration: none;
     cursor: pointer;
     padding: 6px 14px;

@@ -8,6 +8,8 @@ import MenuTab from "./components/tabs/menuTab";
 import ColorsTab from "./components/tabs/colorsTab";
 import TypescaleTab from "./components/tabs/typescaleTab";
 import TypographyTab from "./components/tabs/typographyTab";
+import { ReactComponent as SunIcon } from "./components/icons/sun-icon.svg";
+import { ReactComponent as MoonIcon } from "./components/icons/moon-icon.svg";
 import "./App.css";
 
 const App = () => {
@@ -32,30 +34,50 @@ const App = () => {
       <ThemeProvider
         theme={useDarkTheme ? darkTheme : lightTheme}
         className="themeToggle"
-        style={{
-          color: useDarkTheme ? lightTheme.textColor : darkTheme.textColor,
-        }}
       >
-        <MenuTab setIsExpanded={setIsExpanded} isExpanded={isExpanded} />
+        <MenuTab
+          setIsExpanded={setIsExpanded}
+          isExpanded={isExpanded}
+          useDarkTheme={useDarkTheme}
+        />
         <div className="theme-button-div">
           <button
             className="theme-button flex"
             style={{
               color: useDarkTheme
-                ? lightTheme.textColor
-                : darkTheme.defaultText,
+                ? lightTheme.themeButton
+                : darkTheme.themeButton,
+              // borderColor: useDarkTheme
+              //   ? lightTheme.themeButton
+              //   : darkTheme.themeButton,
+              background: useDarkTheme
+                ? lightTheme.primaryBackgroundFirst
+                : darkTheme.primaryBackgroundFirst,
             }}
             onClick={() => {
               setUseDarkTheme(!useDarkTheme);
             }}
           >
             {useDarkTheme ? "dark mode" : "light mode"}
+            {useDarkTheme ? (
+              <MoonIcon
+                style={{
+                  color: darkTheme.themeButton,
+                }}
+              />
+            ) : (
+              <SunIcon
+                style={{
+                  color: lightTheme.themeButton,
+                }}
+              />
+            )}
           </button>
         </div>
 
         <div className="home-page-div">
           <h1>Design Systems</h1>
-          <div style={{ display: "flex", alignItems: "flex-end" }}></div>
+          <div></div>
           <div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
@@ -67,19 +89,23 @@ const App = () => {
             </p>
           </div>
         </div>
-        <Switch>
+        <Switch
+          style={{
+            color: useDarkTheme ? lightTheme.textColor : darkTheme.defaultText,
+          }}
+        >
           <Route exact path="/"></Route>
           <Route path="/buttons">
-            <ButtonsTab useDarkTheme={useDarkTheme} />
+            <ButtonsTab useDarkTheme={useDarkTheme} title={"Buttons"} />
           </Route>
           <Route path="/color">
-            <ColorsTab useDarkTheme={useDarkTheme} />
+            <ColorsTab useDarkTheme={useDarkTheme} title={"Color"} />
           </Route>
           <Route path="/typography">
-            <TypographyTab />
+            <TypographyTab useDarkTheme={useDarkTheme} title={"Typography"} />
           </Route>
           <Route path="/typescale">
-            <TypescaleTab />
+            <TypescaleTab useDarkTheme={useDarkTheme} title={"Typescale"} />
           </Route>
         </Switch>
 
