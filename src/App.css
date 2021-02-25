@@ -134,7 +134,7 @@
   margin-right: 180px;
   margin-left: 180px;
   border-radius: 40px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   margin-bottom: 100px;
   padding-top: 60px;
 }
@@ -230,7 +230,6 @@ div > button.border-class-purple-dark {
 /* buttons-tab */
 
 .all-buttons {
-  padding-top: 20px;
   display: grid;
   grid-template-columns: column;
 }
@@ -238,7 +237,7 @@ div > button.border-class-purple-dark {
   margin-left: 300px;
   margin-right: 300px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .status-buttons {
@@ -250,12 +249,13 @@ div > button.border-class-purple-dark {
 }
 
 .static-buttons,
-.button-labels,
-.hidden-status-buttons {
+.button-labels {
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .buttons-visible {
@@ -279,10 +279,16 @@ div > button.border-class-purple-dark {
   display: flex;
   justify-content: space-around;
   margin-bottom: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
-.secondary-success-static-buttons button,
-.secondary-warning-static-buttons button,
-.secondary-error-static-buttons button {
+.secondary-success-static-buttons,
+.secondary-warning-static-buttons,
+.secondary-error-static-buttons {
   margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 60px;
+  margin-right: 60px;
 }

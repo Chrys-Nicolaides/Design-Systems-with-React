@@ -25,7 +25,7 @@ const BUTTON_MODIFIERS = {
     &:active {
         background-color: ${status.warningColorActive};
         color: ${status.warningDarkText};
-        border: 1.8px solid ${status.warningColorActiveBorder}
+        border: 1.8px solid ${status.warningDarkText}
     }
     `,
 
@@ -41,7 +41,7 @@ const BUTTON_MODIFIERS = {
     &:active {
         background-color: ${status.errorColorActive};
         color: ${status.errorDarkText};
-        border: 1.8px solid ${status.errorColorHover}
+        border: 1.8px solid ${status.errorDarkText}
     }
     `,
 
@@ -97,8 +97,8 @@ const BUTTON_MODIFIERS = {
 
   SecondaryButtonWarning: ({ theme: { status } }) => `
         background: none;
-        border: 1.8px solid ${status.warningColor};
-        color: ${status.warningColor};
+        border: 1.8px solid ${status.warningSecondary};
+        color: ${status.warningSecondary};
 
         &:hover, &:focus {
           background-color: ${status.warningColorHover};
