@@ -67,16 +67,16 @@ const ButtonsTab = (props) => {
             <div>
               <div className="status-buttons">
                 <PrimaryButton modifiers={["success"]}>
-                  Primary Button
+                  Success Button
                 </PrimaryButton>
                 <PrimaryButton modifiers={["warning"]}>
-                  Primary Button
+                  Warning Button
                 </PrimaryButton>
                 <PrimaryButton modifiers={["error"]}>
-                  Primary Button
+                  Error Button
                 </PrimaryButton>
                 <PrimaryButton modifiers={["disabled"]}>
-                  Primary Button
+                  Disabled Button
                 </PrimaryButton>
               </div>
               <div className="status-buttons">
@@ -107,7 +107,14 @@ const ButtonsTab = (props) => {
           >
             <h3 className="buttons-subheading flex">Button States</h3>
             <div>
-              <div className="button-labels">
+              <div
+                className="button-labels"
+                style={{
+                  color: useDarkTheme
+                    ? lightTheme.disabledBackgroundColor
+                    : darkTheme.disabledBackgroundColor,
+                }}
+              >
                 <div>Default</div>
                 <div>Hover</div>
                 <div>Active</div>
@@ -243,7 +250,7 @@ const ButtonsTab = (props) => {
                   </PrimaryButton>
                 </div>
               </div>
-              <div className="flex">
+              <div className="menu-button flex">
                 <MenuButton
                   onClick={() =>
                     setIsExpanded({
