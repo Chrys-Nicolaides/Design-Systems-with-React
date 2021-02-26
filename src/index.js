@@ -47,9 +47,6 @@ const App = () => {
               color: useDarkTheme
                 ? lightTheme.themeButton
                 : darkTheme.themeButton,
-              // borderColor: useDarkTheme
-              //   ? lightTheme.themeButton
-              //   : darkTheme.themeButton,
               background: useDarkTheme
                 ? lightTheme.primaryBackgroundFirst
                 : darkTheme.primaryBackgroundFirst,

@@ -210,6 +210,11 @@ const ColorsTab = (props) => {
           </div>
           <div className="menu-button-div flex">
             <MenuButton
+              style={{
+                color: useDarkTheme
+                  ? lightTheme.lightColor
+                  : darkTheme.defaultText,
+              }}
               className="menu-button"
               onClick={() =>
                 setIsExpanded({ ...isExpanded, primary: !isExpanded.primary })
