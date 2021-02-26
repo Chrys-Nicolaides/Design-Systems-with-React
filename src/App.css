@@ -107,10 +107,16 @@ svg {
 
 .first-background p {
   padding-bottom: 100px;
-  font-family: "Source Sans Pro";
+  /* font-family: "Source Sans Pro"; */
   font-weight: 300;
   margin-left: 180px;
   margin-right: 180px;
+}
+
+h5 {
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .purple-palette {
@@ -121,7 +127,7 @@ svg {
 .other-colors {
   margin-bottom: 80px;
   margin-top: 0;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .color-details {
@@ -180,6 +186,11 @@ svg {
   margin-top: 60px;
   margin-bottom: 60px;
 }
+
+/* .menu-button button {
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+} */
 
 .status-palettes {
   padding-top: 40px;
@@ -287,6 +298,7 @@ div > button.border-class-purple-dark {
 
 .button-labels {
   margin-bottom: 40px;
+  font-family: "Source Sans Pro";
   font-weight: 400;
 }
 
@@ -321,4 +333,61 @@ div > button.border-class-purple-dark {
   justify-content: space-around;
   margin-left: 60px;
   margin-right: 60px;
+}
+
+/* typography-tab */
+
+.heading-font {
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+.subheading-font {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.heading-font h5,
+hr {
+  font-size: 24px;
+}
+
+.heading-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  align-content: end;
+  vertical-align: bottom;
+}
+
+.heading-container-left {
+  justify-content: start;
+  text-align: left;
+  /* margin-left: 60px; */
+}
+
+div.heading-container-left > h2 {
+  font-size: 288px;
+  font-weight: 700;
+  margin: 0;
+  vertical-align: bottom;
+  align-content: end;
+}
+
+.heading-container-left h5 {
+  font-size: 24px;
+  font-weight: 700;
+  /* margin-left: 60px; */
+}
+
+.heading-container-right {
+  justify-content: end;
+  text-align: left;
+}
+
+.heading-container-right p {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 30px;
 }
