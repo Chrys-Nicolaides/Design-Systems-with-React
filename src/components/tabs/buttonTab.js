@@ -4,7 +4,7 @@ import PrimaryButton, {
   TertiaryButton,
   MenuButton,
 } from "../buttons";
-import { darkTheme, lightTheme } from "../../systems";
+import { darkTheme, lightTheme, typeScale } from "../../systems";
 
 const ButtonsTab = (props) => {
   let [isExpanded, setIsExpanded] = useState({
@@ -24,7 +24,7 @@ const ButtonsTab = (props) => {
             : darkTheme.primaryBackgroundFirst,
         }}
       >
-        <h1>{title}</h1>
+        <h1 className="primary-font display-bold">{title}</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas
           turpis et sapien commodo, id viverra quam pharetra. Maecenas elit
@@ -113,13 +113,38 @@ const ButtonsTab = (props) => {
                 : darkTheme.disabledBackgroundColor,
             }}
           >
-            <h3 className="buttons-subheading flex">Button States</h3>
+            <h4
+              style={{ fontSize: typeScale.h4 }}
+              className="buttons-subheading flex secondary-font display-semibold"
+            >
+              Button States
+            </h4>
             <div>
-              <div className="button-labels">
-                <div>Default</div>
-                <div>Hover</div>
-                <div>Active</div>
-                <div>Disabled</div>
+              <div className="button-labels secondary-font">
+                <h6
+                  className="heading-regular"
+                  style={{ fontSize: typeScale.h6 }}
+                >
+                  Default
+                </h6>
+                <h6
+                  className="heading-regular"
+                  style={{ fontSize: typeScale.h6 }}
+                >
+                  Hover
+                </h6>
+                <h6
+                  className="heading-regular"
+                  style={{ fontSize: typeScale.h6 }}
+                >
+                  Active
+                </h6>
+                <h6
+                  className="heading-regular"
+                  style={{ fontSize: typeScale.h6 }}
+                >
+                  Disabled
+                </h6>
               </div>
               <div className="buttons-visible">
                 <div className="primary-buttons">

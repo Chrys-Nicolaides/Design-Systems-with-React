@@ -9,8 +9,7 @@ import {
   green,
   // teal,
 } from "./colors";
-import { primaryFont } from "./typography";
-import { secondaryFont } from "./typography";
+import { primaryFont, secondaryFont } from "./typography";
 
 export const lightTheme = {
   primaryColor: purple[600],

@@ -6,7 +6,7 @@ import {
   ErrorPalette,
   WarningPalette,
 } from "../colorTiles";
-import { darkTheme, lightTheme } from "../../systems";
+import { darkTheme, lightTheme, typeScale } from "../../systems";
 import { MenuButton } from "../buttons";
 
 const ColorsTab = (props) => {
@@ -96,21 +96,30 @@ const ColorsTab = (props) => {
   const brandList = (object) => {
     return (
       <div className="brand-details">
-        <h5>{object.brandNumber}</h5>
         <h6
+          style={{ fontSize: typeScale.h6 }}
+          className="secondary-font heading-regular"
+        >
+          {object.brandNumber}
+        </h6>
+        <h6
+          className="secondary-font heading-light"
           style={{
             color: useDarkTheme
               ? lightTheme.disabledBackgroundColor
               : darkTheme.disabledBackgroundColor,
+            fontSize: typeScale.helperText,
           }}
         >
           {object.brandLabel}
         </h6>
         <h6
+          className="secondary-font heading-light"
           style={{
             color: useDarkTheme
               ? lightTheme.disabledBackgroundColor
               : darkTheme.disabledBackgroundColor,
+            fontSize: typeScale.h6,
           }}
         >
           {object.brandHex}
@@ -129,7 +138,7 @@ const ColorsTab = (props) => {
             : darkTheme.primaryBackgroundFirst,
         }}
       >
-        <h1>{props.title}</h1>
+        <h1 className="primary-font display-bold">{props.title}</h1>
         <p>
           These are all my colors. Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Nam egestas turpis et sapien commodo, id viverra quam
@@ -138,7 +147,12 @@ const ColorsTab = (props) => {
           consectetur erat. Curabitur feugiat ante sem, a tempor sapien volutpat
           at.
         </p>
-        <h5 className="flex">Brand Colors</h5>
+        <h3
+          style={{ fontSize: typeScale.h3 }}
+          className="brand-colors flex secondary-font heading-regular"
+        >
+          Brand Colors
+        </h3>
 
         <div className="purple-palette">
           {purpleNumbers.map((colourNumber, index) => {
@@ -172,9 +186,19 @@ const ColorsTab = (props) => {
               : darkTheme.disabledBackgroundColor,
           }}
         >
-          <h3 className="other-colors flex">Other Colors</h3>
+          <h4
+            style={{ fontSize: typeScale.h4 }}
+            className="other-colors flex secondary-font display-semibold"
+          >
+            Other Colors
+          </h4>
 
-          <h5 className="flex">Neutral</h5>
+          <h6
+            style={{ fontSize: typeScale.h6 }}
+            className="flex secondary-font heading-regular"
+          >
+            Neutral
+          </h6>
           <div className="neutral-palette flex">
             {greyNumbers.map((colourNumber, index) => {
               let className = "no-click";
@@ -225,7 +249,12 @@ const ColorsTab = (props) => {
           </div>
           {isExpanded.primary ? (
             <div className="status-palettes">
-              <h5 className="flex">Success</h5>
+              <h6
+                style={{ fontSize: typeScale.h6 }}
+                className="flex secondary-font heading-regular"
+              >
+                Success
+              </h6>
 
               <div className="success-palette flex">
                 {greenNumbers.map((colourNumber) => {
@@ -237,7 +266,12 @@ const ColorsTab = (props) => {
                   );
                 })}
               </div>
-              <h5 className="error-label flex">Error</h5>
+              <h6
+                style={{ fontSize: typeScale.h6 }}
+                className="error-label flex secondary-font heading-regular"
+              >
+                Error
+              </h6>
 
               <div className="error-palette flex">
                 {redNumbers.map((colourNumber) => {
@@ -249,7 +283,12 @@ const ColorsTab = (props) => {
                   );
                 })}
               </div>
-              <h5 className="warning-label flex">Warning</h5>
+              <h6
+                style={{ fontSize: typeScale.h6 }}
+                className="warning-label flex secondary-font heading-regular"
+              >
+                Warning
+              </h6>
               <div className="warning-palette flex">
                 {yellowNumbers.map((colourNumber) => {
                   return (
