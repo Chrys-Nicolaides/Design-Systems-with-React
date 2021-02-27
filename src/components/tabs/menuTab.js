@@ -21,8 +21,8 @@ const MenuTab = (props) => {
               : darkTheme.projectName,
           }}
         >
-          <h5>Design</h5>
-          <h6>Systems</h6>
+          <h5 className="primary-font display-bold">Design</h5>
+          <h6 className="primary-font heading-regular">Systems</h6>
         </div>
 
         <div

@@ -73,7 +73,7 @@ const App = () => {
         </div>
 
         <div className="home-page-div">
-          <h1>Design Systems</h1>
+          <h1 className="primary-font display-bold">Design Systems</h1>
           <div></div>
           <div>
             <p>
@@ -93,10 +93,18 @@ const App = () => {
         >
           <Route exact path="/"></Route>
           <Route path="/buttons">
-            <ButtonsTab useDarkTheme={useDarkTheme} title={"Buttons"} />
+            <ButtonsTab
+              useDarkTheme={useDarkTheme}
+              title={"Buttons"}
+              style={{ fontFamily: darkTheme.primaryFont }}
+            />
           </Route>
           <Route path="/color">
-            <ColorsTab useDarkTheme={useDarkTheme} title={"Color"} />
+            <ColorsTab
+              useDarkTheme={useDarkTheme}
+              title={"Color"}
+              style={{ fontFamily: darkTheme.secondaryFont }}
+            />
           </Route>
           <Route path="/typography">
             <TypographyTab useDarkTheme={useDarkTheme} title={"Typography"} />
