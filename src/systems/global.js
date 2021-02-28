@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { primaryFont, secondaryFont } from "./typography";
 import { normalize } from "polished";
+import { darkTheme, lightTheme } from "../systems";
 
 export const GlobalStyle = createGlobalStyle`
 ${normalize()}
@@ -8,9 +9,9 @@ html {
   box-sizing: border-box;
   // font-size: 16px;
 }
-// *, *:before, *:after {
-//   box-sizing: inherit;
-// }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,12 +51,10 @@ a, button {
   font-weight: 300;
 }
 
-
-p {
-  font-family: ${secondaryFont};
-  font-weight: 300;
+.underlined-heading {
+  padding-bottom: 22px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid ${darkTheme.disabledBackgroundColor};
 }
-
-
 
 `;
