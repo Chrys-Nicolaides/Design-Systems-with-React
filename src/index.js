@@ -76,7 +76,7 @@ const App = () => {
           <h1 className="primary-font display-bold">Design Systems</h1>
           <div></div>
           <div>
-            <p>
+            <p className="secondary-font heading-regular">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
               egestas turpis et sapien commodo, id viverra quam pharetra.
               Maecenas elit ligula, facilisis in odio sodales, eleifend
@@ -94,16 +94,16 @@ const App = () => {
           <Route exact path="/"></Route>
           <Route path="/buttons">
             <ButtonsTab
+              className="primary-font"
               useDarkTheme={useDarkTheme}
               title={"Buttons"}
-              style={{ fontFamily: darkTheme.primaryFont }}
             />
           </Route>
           <Route path="/color">
             <ColorsTab
+              className="secondary-font"
               useDarkTheme={useDarkTheme}
               title={"Color"}
-              style={{ fontFamily: darkTheme.secondaryFont }}
             />
           </Route>
           <Route path="/typography">

@@ -139,7 +139,7 @@ const ColorsTab = (props) => {
         }}
       >
         <h1 className="primary-font display-bold">{props.title}</h1>
-        <p>
+        <p className="secondary-font heading-regular">
           These are all my colors. Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Nam egestas turpis et sapien commodo, id viverra quam
           pharetra. Maecenas elit ligula, facilisis in odio sodales, eleifend

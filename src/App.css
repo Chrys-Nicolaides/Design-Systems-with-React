@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-top: -82px;
+  margin-top: -60px;
   margin-right: 46px;
 }
 
@@ -110,7 +110,6 @@ svg {
 
 .first-background p {
   padding-bottom: 100px;
-  font-weight: 300;
   margin-left: 180px;
   margin-right: 180px;
 }
@@ -226,16 +225,6 @@ div > button.border-class-purple-dark {
   margin-left: 46px;
 }
 
-.project-name h5 {
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.project-name h6 {
-  font-weight: 300;
-  font-size: 20px;
-}
-
 .nav-menu {
   display: flex;
   align-items: baseline;
@@ -283,13 +272,13 @@ div > button.border-class-purple-dark {
 }
 
 .button-labels {
-  font-weight: 400;
+  /* font-weight: 400; */
 }
 
 .buttons-subheading {
   margin-bottom: 40px;
   margin-top: 0;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .hidden-status-buttons {
@@ -326,17 +315,24 @@ div > button.border-class-purple-dark {
   margin-right: 180px;
 }
 
-.subheading-font {
+.subheading-font,
+.body-font {
   margin-left: 60px;
   margin-right: 60px;
 }
 
-.heading-font h5,
-hr {
-  font-size: 24px;
+.heading-font h3 {
+  margin-top: 140px;
 }
 
-.heading-container {
+.heading-font {
+  margin-bottom: 40px;
+}
+
+.display-container,
+.heading-container,
+.subheading-container,
+.body-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: end;
@@ -347,31 +343,113 @@ hr {
 .heading-container-left {
   justify-content: start;
   text-align: left;
-  /* margin-left: 60px; */
 }
 
-div.heading-container-left > h2 {
+.display-container-left > h2,
+.heading-container-left > h2,
+.subheading-container-left > h2,
+.body-container-left > h2 {
   font-size: 288px;
-  font-weight: 700;
   margin: 0;
   vertical-align: bottom;
   align-content: end;
 }
 
-.heading-container-left h5 {
-  font-size: 24px;
-  font-weight: 700;
-  /* margin-left: 60px; */
-}
-
-.heading-container-right {
+.heading-container-right,
+.body-container-right {
   justify-content: end;
   text-align: left;
 }
 
+.display-container-right p,
 .heading-container-right p {
   font-size: 36px;
-  font-weight: 700;
   margin: 0;
-  padding-bottom: 30px;
+}
+
+.subheading-container-right p,
+.body-container-right p {
+  font-size: 32px;
+  margin: 0;
+}
+
+.display-container-right > .alphabet,
+.heading-container-right > .alphabet,
+.subheading-container-right > .alphabet,
+.body-container-right > .alphabet {
+  padding-bottom: 40px;
+}
+
+.display-container-right > .symbols,
+.heading-container-right > .symbols,
+.subheading-container-right > .symbols,
+.body-container-right > .symbols {
+  padding-bottom: 60px;
+}
+
+.heading-container > .font-title {
+  margin-bottom: 140px;
+}
+
+.subheading-container > .font-title,
+.body-container > .font-title {
+  margin-bottom: 80px;
+}
+
+.font-title {
+  margin-top: -20px;
+}
+
+/* typescaleTab */
+
+.first-background > .typescale-display {
+  margin-left: 180px;
+}
+
+.second-background > .typescale-heading {
+  margin-left: 80px;
+}
+
+.typescale-display > h1,
+.typescale-heading > h1 {
+  margin-left: 0;
+}
+
+.typescale-display > h1 {
+  margin-top: 100px;
+}
+
+.typescale-heading > h1,
+.typescale-heading > h3,
+.typescale-heading > h4 {
+  margin-top: 40px;
+}
+
+.typescale-heading > h5,
+.typescale-heading > .heading-paragraph {
+  margin-top: 40px;
+}
+
+.typescale-display > .underlined-heading {
+  margin-left: 0;
+  margin-right: 180px;
+}
+
+.typescale-heading > .underlined-heading {
+  margin-left: 0;
+  margin-right: 80px;
+  margin-bottom: 80px;
+}
+
+.typescale-heading > p {
+  padding: 10px 0 0 0;
+  margin-left: 0;
+}
+
+.typescale-heading > .heading-copyright {
+  padding-bottom: 40px;
+}
+
+.typescale-display > .font-label {
+  margin-top: 140px;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import StyledLink from "../links";
 import { Link } from "react-router-dom";
-import { darkTheme, lightTheme } from "../../systems";
+import { darkTheme, lightTheme, typeScale } from "../../systems";
 import { ThemeProvider } from "styled-components";
 
 const MenuTab = (props) => {
@@ -21,8 +21,18 @@ const MenuTab = (props) => {
               : darkTheme.projectName,
           }}
         >
-          <h5 className="primary-font display-bold">Design</h5>
-          <h6 className="primary-font heading-regular">Systems</h6>
+          <h4
+            style={{ fontSize: typeScale.h4 }}
+            className="primary-font display-semibold"
+          >
+            Design
+          </h4>
+          <h4
+            style={{ fontSize: typeScale.h4 }}
+            className="primary-font heading-light"
+          >
+            Systems
+          </h4>
         </div>
 
         <div
