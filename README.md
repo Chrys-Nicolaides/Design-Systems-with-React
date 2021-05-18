@@ -6,4 +6,4 @@ These pre-defined, reusable UI components allow teams to build scalable, complex
 
 ### “A Design System is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.” - UX Collective.
 
-# As my knowledge and understanding of design systems grow, I aim to update, improve and further develop this project into a complete library of reusable components - all guided by rules that enforce consistency and speed 😎
+As my knowledge and understanding of design systems grow, I aim to update, improve and further develop this project into a complete library of reusable components - all guided by rules that enforce consistency and speed 😎
