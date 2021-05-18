@@ -25,26 +25,36 @@ const ButtonsTab = (props) => {
         }}
       >
         <h1 className="primary-font display-bold">{title}</h1>
-        <p className="secondary-font heading-regular">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas
-          turpis et sapien commodo, id viverra quam pharetra. Maecenas elit
-          ligula, facilisis in odio sodales, eleifend ultricies sapien. Cras
-          nisi enim, ornare at erat eget, varius consectetur erat. Curabitur
-          feugiat ante sem, a tempor sapien volutpat at. Pellentesque nisl eros,
-          suscipit condimentum ornare nec, eleifend ut neque. Quisque imperdiet
-          vestibulum elit, at eleifend turpis eleifend vestibulum. Duis lorem
-          libero, vestibulum ut feugiat nec, fermentum nec nulla. Curabitur
-          faucibus magna nec erat tincidunt ornare. Proin rutrum mauris ut
-          tincidunt tempus. Vestibulum vel dui ipsum. Quisque pharetra
-          sollicitudin facilisis. Proin consequat lorem enim. Nullam sodales,
-          leo at vestibulum porttitor, odio est consequat magna, ut ullamcorper
-          nulla magna a nisl. Sed ac elit orci. Duis egestas, justo sagittis
-          pharetra feugiat, mi ipsum facilisis nulla, a laoreet augue risus sed
-          odio. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Maecenas leo nunc, dignissim sit amet
-          consectetur eget, ullamcorper ut massa. Pellentesque arcu neque,
-          tempus ultricies maximus et, maximus at tellus. Phasellus varius risus
-          eget scelerisque maximus.
+        <p className="secondary-font heading-light">
+          Buttons are arguably a design system’s most important interactive
+          component. They are clickable elements used to trigger actions that
+          allow users to interact with web pages in various ways. Each button
+          variant has a specific function, and their button designs and labels
+          communicate that function and calls to action to users. Buttons are
+          the purest expression of a Design System’s visual style as it unifies
+          three fundamental attributes - color, typography and iconography. Each
+          web page should include one Primary button, with any other remaining
+          call to actions represented with secondary, less emphasised buttons.
+          <p className="p-text secondary-font heading-light">
+            Primary buttons are the principle call to action button style for
+            the most important positive action on a web page and should only
+            appear once per screen. Secondary buttons are used for secondary
+            actions on a page, while still of importance, but won't trigger the
+            highest-priority action on a page, such as navigating to other
+            content on the page. They have a subtle style variation and can be
+            commonly used in combination with Primary buttons. When used as part
+            of a pair, a Secondary button can be used to perform the set's
+            negative action, such as ‘cancel’ or ‘back’. Secondary buttons
+            should not be used in isolation or used for positive actions.
+            Tertiary buttons are even less prominent than Secondary buttons.
+            They can be used for sub-tasks on a page, used in isolation or
+            paired with Primary buttons where multiple calls to action exist.
+          </p>{" "}
+          <p className="p-text secondary-font heading-light">
+            Disabled buttons are typically greyed out and not clickable buttons,
+            often to communicate to the user that they have not completed all
+            necessary steps to proceed further.
+          </p>
         </p>
         <div className="all-buttons">
           <div className="clickable-buttons flex">

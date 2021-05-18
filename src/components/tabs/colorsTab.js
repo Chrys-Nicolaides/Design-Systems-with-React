@@ -139,19 +139,29 @@ const ColorsTab = (props) => {
         }}
       >
         <h1 className="primary-font display-bold">{props.title}</h1>
-        <p className="secondary-font heading-regular">
-          These are all my colors. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nam egestas turpis et sapien commodo, id viverra quam
-          pharetra. Maecenas elit ligula, facilisis in odio sodales, eleifend
-          ultricies sapien. Cras nisi enim, ornare at erat eget, varius
-          consectetur erat. Curabitur feugiat ante sem, a tempor sapien volutpat
-          at.
+        <p className="secondary-font heading-light">
+          Understanding how colour impacts human psychology is a key deciding
+          factor when selecting colour palettes for digital interfaces, hence
+          being an important consideration for UX designers. The use of colour
+          can have an emotional impact on users and their affect their overall
+          perception of a particular design or interface.
+          <p className="p-text secondary-font heading-light">
+            Colour accessibility affects everyone, regardless of whether they
+            have any form of colour vision deficiency or impairment.
+          </p>
+          <p className="p-text secondary-font heading-light">
+            The colour purple was selected for this design system due as it is
+            believed to evoke creativity, as well as feelings of reliability,
+            loyalty and wisdom. The use of lighter shades of purple in
+            particular in visual designs can help create postive atmospheres for
+            users.
+          </p>
         </p>
         <h3
           style={{ fontSize: typeScale.h3 }}
           className="brand-colors flex secondary-font heading-regular"
         >
-          Brand Colors
+          Brand Colours
         </h3>
 
         <div className="purple-palette">

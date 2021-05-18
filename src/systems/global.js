@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { primaryFont, secondaryFont } from "./typography";
 import { normalize } from "polished";
-import { darkTheme, lightTheme } from "../systems";
+import { darkTheme } from "../systems";
 
 export const GlobalStyle = createGlobalStyle`
 ${normalize()}
@@ -55,6 +55,15 @@ a, button {
   padding-bottom: 22px;
   margin-bottom: 10px;
   border-bottom: 2px solid ${darkTheme.disabledBackgroundColor};
+}
+
+p > .p-text {
+  padding-top: 32px;
+  padding-bottom: 0;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 `;
