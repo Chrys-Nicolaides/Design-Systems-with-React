@@ -54,7 +54,7 @@ const MenuTab = (props) => {
           </StyledLink>
 
           <StyledLink>
-            <Link to="/color">{props.ColorsTab}Colors</Link>
+            <Link to="/color">{props.ColorsTab}Colours</Link>
           </StyledLink>
 
           <StyledLink>

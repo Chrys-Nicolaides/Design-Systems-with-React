@@ -200,7 +200,7 @@ const ColorsTab = (props) => {
             style={{ fontSize: typeScale.h4 }}
             className="other-colors flex secondary-font display-semibold"
           >
-            Other Colors
+            Other Colours
           </h4>
 
           <h6
