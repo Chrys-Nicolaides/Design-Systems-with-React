@@ -13,7 +13,7 @@ export const typeScale = {
   h4: "20px",
   h5: "18px",
   h6: "16px",
-  paragraph: "16px",
+  paragraph: "18px",
   helperText: "14px",
   copyrightText: "12px",
 };
