@@ -76,7 +76,7 @@ const App = () => {
           <h1 className="primary-font display-bold">Design Systems</h1>
           <div></div>
           <div>
-            <p className="secondary-font heading-light">
+            <p className="p-text secondary-font heading-light">
               Design systems include a series of reusable UI Components to
               develop new experiences.
               <p className="p-text secondary-font heading-light">
@@ -120,7 +120,7 @@ const App = () => {
             <ColorsTab
               className="secondary-font"
               useDarkTheme={useDarkTheme}
-              title={"Color"}
+              title={"Colour"}
             />
           </Route>
           <Route path="/typography">

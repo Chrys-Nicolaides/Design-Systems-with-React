@@ -118,6 +118,8 @@ svg {
   margin-left: 180px;
   margin-right: 180px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .other-colors {
@@ -228,6 +230,7 @@ div > button.border-class-purple-dark {
 .nav-menu {
   display: flex;
   align-items: baseline;
+  padding-top: 10px;
 }
 
 .menu-tabs {

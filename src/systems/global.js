@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 ${normalize()}
 html {
   box-sizing: border-box;
-  // font-size: 16px;
+  // font-size: 18px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -33,6 +33,8 @@ a, button {
 
 .secondary-font {
   font-family: ${secondaryFont};
+  font-size: 18px;
+
 }
 
 .display-bold {
@@ -48,7 +50,7 @@ a, button {
 }
 
 .heading-light {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .underlined-heading {
@@ -64,6 +66,7 @@ p > .p-text {
   margin-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 18px;
 }
 
 `;
